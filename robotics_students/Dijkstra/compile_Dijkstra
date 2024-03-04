@@ -1,0 +1,4 @@
+echo touch Dijkstra.cpp
+touch Dijkstra.cpp
+echo make
+make

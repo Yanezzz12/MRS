@@ -1,0 +1,14 @@
+
+File ~/robotics/data/random_settings_advance_angle_sensors.dat is used to generate the noise that it is added to
+the variables for movements, rotations and sensors.
+
+The first row contains the settings for the advance variable, the first number (1) indicates a Gaussian random
+variable, the second indicates the mean (0.0) and the third the variance (0.1)
+The second row contains the settings for the rotation variable, the first number (0) indicates an uniform random
+variable, the second and third indicates the uniform's range (-0.02, 0.02)
+The third row contains the settings for the sensor variable, the first number (0) indicates an uniform random
+variable, the second and third indicates the uniform's range (-1.0, 1.0)
+
+1 0.0 0.1
+0 -0.02 0.02
+0 -1.0 1.0
