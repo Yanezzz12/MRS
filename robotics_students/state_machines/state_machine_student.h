@@ -35,9 +35,19 @@
 //----END OF ADDED----*/
 
 
+
+float slopeEquation(float m, float b, float x)
+{
+	float y = m * x + b;
+	return y;
+}
+
 //Student State Machine 1 (python2.7 GUI_robotics_students.py 5)
-coord obs_coord = {0.0f, 0.0f, 0.0f};
-AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float Mag_Advance, float max_angle, int num_sensors, float angle_light, coord coord_robot)
+float m, angle, slope, intercept;
+int obstacleEncountered = 0;
+coord obs_coord = {0.0f, 0.0f, 0.0f}; //Default conditions
+coord initial_position = {0.0f, 0.0f, 0.0f}; 
+AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float Mag_Advance, float max_angle, int num_sensors, float angle_light, coord coord_robot, coord coord_dest)
 {
 	AdvanceAngle gen_vector;
  	int obs;
@@ -47,19 +57,27 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
  	int value = 0;
  	static int step = 0;
 
- 	step++;
+	//----ADDED CODE----//
+	if(step == 0)
+	{
+		initial_position = coord_robot;
+		slope = (coord_dest.yc - initial_position.yc)/(coord_dest.xc - initial_position.xc); 	//Slope
+		intercept = initial_position.yc - slope * initial_position.xc; 							//Intercept
+	}
+	//----END OF ADDED CODE----//
+
  	printf("\n\n **************** Student Reactive Behavior %d *********************\n", step);
 
  	//Left & right sensing
  	for(j = 0; j < num_sensors/2;j++)
  	{
         right_side = observations.sensors[j] + right_side;
-        printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
+        printf("Right side sensor[%d] %f\n",j,observations.sensors[j]);
  	}
  	for(j = num_sensors/2;j < num_sensors;j++)
  	{
     	left_side = observations.sensors[j] + left_side;
-        printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
+        printf("Left side sensor[%d] %f\n",j,observations.sensors[j]);
  	}
 
  	right_side = right_side/(num_sensors/2);
@@ -83,35 +101,51 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 		>> When obstacle found, register coordinates and turn left to round object
 		>> When coordinates are equal to previously saved, follow angle light direction again
 		>> Repeat past step if necessary
-		>> 
 	*/
 
-	if(obs_coord.xc == 0)
+	if(obs == 0) //No obstacle
 	{
-		//Robot moves towards light
-		gen_vector = MoveRobot(Mag_Advance, angle_light);
-		printf("Test");
-		if(obs == 3) //Obstacle in front
+		if(obstacleEncountered != 0)
 		{
-			obs_coord = coord_robot; //Robot registers coordinates of obstacle
-			gen_vector = generate_output(LEFT, Mag_Advance, max_angle);
-			printf("Coords registered!");
-		} 
-	}
-	else
-	{
-		//Round object
-		if(obs == 0)
+			if(right_side < 0.05)
+			{
+				gen_vector = generate_output(FORWARD, Mag_Advance, max_angle);
+			}
+			else if(right_side >= 0.05)
+			{
+				gen_vector = MoveRobot(Mag_Advance, -20);
+			}
+			if(std::trunc(coord_robot.yc)/100 == std::trunc(slopeEquation(slope, intercept, coord_robot.xc)))
+			{
+				gen_vector = MoveRobot(Mag_Advance, angle_light);
+				obstacleEncountered = 0;
+			}
+		}
+		else 
 		{
 			gen_vector = generate_output(FORWARD, Mag_Advance, max_angle);
 		}
-		
-	
-	
 	}
+	else if(obs == 1) //Obstacle in the right 
+	{
+		gen_vector = generate_output(LEFTADVANCE, Mag_Advance, max_angle);
+	}
+	else if(obs == 2) //Obstacle in the left
+	{
+		gen_vector = generate_output(RIGHTADVANCE, Mag_Advance, max_angle);
+	}
+	else if(obs == 3) //Obstacle in front
+	{
+		obstacleEncountered = 1;
+		gen_vector = generate_output(LEFTADVANCETWICE, Mag_Advance, max_angle);
+	}
+
+	if(step == 0)
+		gen_vector = MoveRobot(Mag_Advance, angle_light);
 
 	//----END OF ADDED CODE----//
 
+	step++;
 	return gen_vector;
 }
 
