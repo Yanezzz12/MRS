@@ -290,7 +290,7 @@ int go_to(Inputs inputs)
 		{
 			// It calculates the robot's movement using an state machine created by an student
 			// state_machine_avoidance_destination in ../state_machines/state_machine_student.h
-			DistTheta = reactive_students(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors, angle_light, coord_robot);
+			DistTheta = reactive_students(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors, angle_light, coord_robot, coord_dest);
 
 			#ifdef DEBUG
 				printf("Student reactive behavior movement avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
