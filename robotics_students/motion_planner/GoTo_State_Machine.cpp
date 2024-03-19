@@ -301,7 +301,7 @@ int go_to(Inputs inputs)
 			// It calculates the robot's movement using an state machine created by an student
 			state=next_state;
 			// state_machine_students in ../state_machines/state_machine_student.h
-			DistTheta = state_machine_students(observations, quantized_attraction, quantized_intensity,state,&next_state,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
+			DistTheta = state_machine_students(observations, quantized_attraction, quantized_intensity,state,&next_state,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors, coord_robot, coord_dest);
 			#ifdef DEBUG
 				printf("Student FSM behavior avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
 			#endif
