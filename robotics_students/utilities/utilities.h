@@ -1579,7 +1579,7 @@ void write_mdps(struct mdp_database mdp, char *path)
 
 }
 
-
+//Function created by me (1)
 AdvanceAngle MoveRobot(float advance, float angle)
 {
         AdvanceAngle output;
@@ -1589,7 +1589,38 @@ AdvanceAngle MoveRobot(float advance, float angle)
         return(output);
 }
 
-// it generates a robot's output
+//Function created by me (2)
+coord unitaryVector(coord inputVector)
+{
+        float magnitude; coord uVector = {0.0f, 0.0f, 0.0f};
+
+        magnitude = sqrt(pow(inputVector.xc, 2) + pow(inputVector.yc, 2));
+        uVector.xc = inputVector.xc / magnitude;
+        uVector.yc = inputVector.yc / magnitude;
+
+        return uVector; 
+}
+
+float angleVector(coord inputVector)
+{
+        float vectorAngle;
+
+        if((inputVector.xc > 0) && (inputVector.yc > 0))
+                vectorAngle = atan(inputVector.yc/inputVector.xc) * (180/PI);
+        else if((inputVector.xc < 0) && (inputVector.yc > 0))
+                vectorAngle = 90.0 + atan(inputVector.xc/inputVector.yc) * (180/PI);
+        else if((inputVector.xc < 0) && (inputVector.yc < 0)) 
+                vectorAngle = 180.0 + atan(inputVector.yc/inputVector.xc) * (180/PI);
+        else if((inputVector.xc > 0) && (inputVector.yc < 0))
+                vectorAngle = 270.0f + atan(inputVector.xc/inputVector.yc) * (180/PI);
+
+        if(vectorAngle > 180.0f)
+                vectorAngle = vectorAngle - 360;        
+
+        return vectorAngle;
+}
+
+//It generates a robot's output
 AdvanceAngle generate_output(int out,float advance, float angle)
 {
     AdvanceAngle output;
