@@ -211,6 +211,8 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	angleDirection = angleVector(newPosition);
 
 	gen_vector = MoveRobot(0.02, angleDirection);
+	//Aqui tienes el código que modificaste
+	//CTRL + A para copiar todo en el archivo
 
 	//Coordenadas: coord_robot, coord coord_dest
 	//----END OF ADDED CODE----//
