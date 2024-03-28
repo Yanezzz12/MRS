@@ -215,6 +215,7 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	//Aqui tienes el código que modificaste
 	//CTRL + A para copiar todo en el archivo
 
+	//Comentario de prueba
 	//Coordenadas: coord_robot, coord coord_dest
 	//----END OF ADDED CODE----//
  	
