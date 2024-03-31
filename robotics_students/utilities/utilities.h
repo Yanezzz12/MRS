@@ -1601,25 +1601,6 @@ coord unitaryVector(coord inputVector)
         return uVector; 
 }
 
-float angleVector(coord inputVector)
-{
-        float vectorAngle;
-
-        if((inputVector.xc > 0) && (inputVector.yc > 0))
-                vectorAngle = atan(inputVector.yc/inputVector.xc) * (180/PI);
-        else if((inputVector.xc < 0) && (inputVector.yc > 0))
-                vectorAngle = 90.0 + atan(inputVector.xc/inputVector.yc) * (180/PI);
-        else if((inputVector.xc < 0) && (inputVector.yc < 0)) 
-                vectorAngle = 180.0 + atan(inputVector.yc/inputVector.xc) * (180/PI);
-        else if((inputVector.xc > 0) && (inputVector.yc < 0))
-                vectorAngle = 270.0f + atan(inputVector.xc/inputVector.yc) * (180/PI);
-
-        if(vectorAngle > 180.0f)
-                vectorAngle = vectorAngle - 360;        
-
-        return vectorAngle;
-}
-
 //It generates a robot's output
 AdvanceAngle generate_output(int out,float advance, float angle)
 {

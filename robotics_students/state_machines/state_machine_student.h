@@ -151,7 +151,7 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 }
 
 //Student State Machine 2 (python2.7 GUI_robotics_students.py 6)
-coord fq = {0.00001, 0.00001f, 0.0f};
+coord Fu = {0.00001, 0.00001f, 0.0f};
 coord previousPosition = {0.001f, 0.001f, 0.0f};
 AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest)
 {
@@ -167,7 +167,8 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	float delta = 1.0f;
 	float Uatr;
 	coord Fatr;
-	coord newPosition;
+	coord nextPos;
+	coord dirVector;
 	float angleDirection;
 	//End of added variables
 
@@ -176,13 +177,13 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	for(j = 0;j < num_sensors/2;j++)
  	{
         right_side = observations.sensors[j] + right_side;
-        printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
+        //printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
  	}
 
  	for(j = num_sensors/2;j < num_sensors;j++)
  	{
         left_side = observations.sensors[j] + left_side;
-        printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
+        //printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
  	}
 
 	right_side = right_side/(num_sensors/2);
@@ -200,23 +201,30 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
 
 	//----ADDED CODE----//
-	Uatr = (0.5) * E1 * (pow(coord_robot.xc - coord_dest.xc,2) + pow(coord_robot.yc - coord_dest.yc, 2));
+	Uatr = (0.5) * E1 * (pow(coord_robot.xc - coord_dest.xc, 2) + pow(coord_robot.yc - coord_dest.yc, 2));
 	Fatr = {E1 * (coord_robot.xc - coord_dest.xc), E1 * (coord_robot.yc - coord_dest.yc), 0.0f};
+	Fu = unitaryVector(Fatr); 
+	
+	//nextPos = q_(n+1)
+	nextPos.xc = coord_robot.xc - delta * Fu.xc; 
+	nextPos.yc = coord_robot.yc - delta * Fu.yc;
 
-	newPosition.xc = previousPosition.xc - delta * fq.xc;
-	newPosition.yc = previousPosition.yc - delta * fq.yc;
+	//Direction vector
+	dirVector.xc = nextPos.xc - coord_robot.xc;
+	dirVector.yc = nextPos.yc - coord_robot.yc;
+	dirVector.anglec = atan2(dirVector.yc, dirVector.xc) * 180/PI;
 
-	previousPosition = coord_robot;
-	fq = unitaryVector(Fatr); 
+	//
+	if(coord_robot.anglec > dirVector.anglec)
+		{ gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);		}
+	else if(coord_robot.anglec < dirVector.anglec)
+		{ gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);		}	
 
-	angleDirection = angleVector(newPosition);
-
-	gen_vector = MoveRobot(0.02, angleDirection);
-	//Aqui tienes el código que modificaste
-	//CTRL + A para copiar todo en el archivo
-
+	printf("%f\n", angleDirection);
+	printf("%f", coord_robot.anglec);
+	
 	//Coordenadas: coord_robot, coord coord_dest
-	//----END OF ADDED CODE----//
+	//----END OF ADDED CODE----// <>
  	
 	return gen_vector;
 }
