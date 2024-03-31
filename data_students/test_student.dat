@@ -1,422 +1,702 @@
-../motion_planner/GoTo_State_Machine -x 0.240000 -y 0.207500 -a 76.914398 -v 0.875000 -z 0.077500 -s laser -n 16 -t -2.356100 -r 4.712200 -p ../../data_students/ -e obstacle -advance 0.040000 -MaxAngle 0.785400 -selection 6 -largest 0.100000 -noise 0 -omni 1 -vq 0 -size_vq 0 -pr_out 0 -out_file obstacle -nn_rec 0 -nn_unk 0
+../motion_planner/GoTo_State_Machine -x 0.847500 -y 0.160000 -a 44.875198 -v 0.530000 -z 0.882500 -s laser -n 16 -t -2.356100 -r 4.712200 -p ../../data_students/ -e obstacle -advance 0.040000 -MaxAngle 0.785400 -selection 6 -largest 0.100000 -noise 0 -omni 1 -vq 0 -size_vq 0 -pr_out 0 -out_file obstacle -nn_rec 0 -nn_unk 0
 
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 3
-31380993998848.000000
-76.914398
+-0.000001
+44.875198
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--5.286769
+intensity 0 obstacles 0 dest 3
+-0.000001
+107.439713
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.114719
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.151390
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.453279
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.602211
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.501083
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.762566
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.505955
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.807434
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506372
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.819221
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.822205
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.822914
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823090
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506405
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506408
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506405
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506410
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506402
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506408
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506406
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506408
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506405
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506411
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506402
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506410
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506402
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506408
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823158
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506407
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823120
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.099947
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.099312
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823158
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.098229
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823120
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.098792
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.098201
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823158
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.097008
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823120
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.097465
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.098040
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823120
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.097399
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823151
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.099120
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823120
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.099117
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823128
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.098639
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823158
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506403
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823097
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506412
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823189
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506395
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823082
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506421
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823189
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506384
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823059
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506439
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823235
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506346
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.822990
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506518
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823364
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506183
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.822754
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.506896
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.823807
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.505225
-
- **************** Student State Machine *********************
-Average right side 0.099986
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.509504
-
- **************** Student State Machine *********************
-Average right side 0.099710
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.497509
-
- **************** Student State Machine *********************
-Average right side 0.099105
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.534513
-
- **************** Student State Machine *********************
-Average right side 0.098898
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.408306
-
- **************** Student State Machine *********************
-Average right side 0.097019
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--6.886095
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.821808
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--4.918645
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.825974
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--10.304947
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.816544
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-31380993998848.000000
--13.081516
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.839798
 
  **************** Student State Machine *********************
 Average right side 0.100000
 Average left side 0.100000
-intensity 1 obstacles 0 dest 2
-31380993998848.000000
--12.121008
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.777061
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.962875
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.357971
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+110.452415
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+105.731964
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.186226
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.327858
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+110.369423
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.001915
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+107.475166
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+111.492996
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.563988
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.837646
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+110.538170
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.619331
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.760178
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.620972
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.765648
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.614182
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.743019
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.642853
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.837746
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.534256
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+109.466965
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+107.118172
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+111.033676
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+107.913849
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+110.984436
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+107.752541
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+111.156334
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.344879
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+110.144279
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+106.251038
+
+ **************** Student State Machine *********************
+Average right side 0.100000
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+-0.000001
+108.451729

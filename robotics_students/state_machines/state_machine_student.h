@@ -214,14 +214,11 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	dirVector.yc = nextPos.yc - coord_robot.yc;
 	dirVector.anglec = atan2(dirVector.yc, dirVector.xc) * 180/PI;
 
-	//
-	if(coord_robot.anglec > dirVector.anglec)
-		{ gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);		}
-	else if(coord_robot.anglec < dirVector.anglec)
-		{ gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);		}	
+	//Vector movement applied
+	gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);	
 
-	printf("%f\n", angleDirection);
-	printf("%f", coord_robot.anglec);
+	//	printf("%f\n", angleDirection);
+	//	printf("%f", coord_robot.anglec);
 	
 	//Coordenadas: coord_robot, coord coord_dest
 	//----END OF ADDED CODE----// <>
