@@ -1597,6 +1597,7 @@ coord unitaryVector(coord inputVector)
         magnitude = sqrt(pow(inputVector.xc, 2) + pow(inputVector.yc, 2));
         uVector.xc = inputVector.xc / magnitude;
         uVector.yc = inputVector.yc / magnitude;
+        uVector.anglec = atan2(inputVector.yc, inputVector.xc) * 180/PI;
 
         return uVector; 
 }

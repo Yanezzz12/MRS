@@ -168,7 +168,6 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	float Uatr;
 	coord Fatr;
 	coord nextPos;
-	coord dirVector;
 	float angleDirection;
 	//End of added variables
 
@@ -202,20 +201,19 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 
 	//----ADDED CODE----//
 	Uatr = (0.5) * E1 * (pow(coord_robot.xc - coord_dest.xc, 2) + pow(coord_robot.yc - coord_dest.yc, 2));
+	//Urep = ;
 	Fatr = {E1 * (coord_robot.xc - coord_dest.xc), E1 * (coord_robot.yc - coord_dest.yc), 0.0f};
-	Fu = unitaryVector(Fatr); 
+	Fu = unitaryVector(Fatr); //This counts as a direction vector
 	
 	//nextPos = q_(n+1)
 	nextPos.xc = coord_robot.xc - delta * Fu.xc; 
 	nextPos.yc = coord_robot.yc - delta * Fu.yc;
 
 	//Direction vector
-	dirVector.xc = nextPos.xc - coord_robot.xc;
-	dirVector.yc = nextPos.yc - coord_robot.yc;
-	dirVector.anglec = atan2(dirVector.yc, dirVector.xc) * 180/PI;
+	
 
 	//Vector movement applied
-	gen_vector = MoveRobot(0.01, dirVector.anglec - coord_robot.anglec);	
+	gen_vector = MoveRobot(0.01, Fu.anglec - coord_robot.anglec);	
 
 	//	printf("%f\n", angleDirection);
 	//	printf("%f", coord_robot.anglec);
