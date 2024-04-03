@@ -150,6 +150,9 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 	return gen_vector;
 }
 
+//Functions: magnitude, dif_vectors, get_angle, get_intensity_angle, 
+
+
 //Student State Machine 2 (python2.7 GUI_robotics_students.py 6)
 coord Fu = {0.00001, 0.00001f, 0.0f};
 coord previousPosition = {0.001f, 0.001f, 0.0f};
@@ -165,21 +168,25 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	//Added variables
 	float E1 = 0.5f;
 	float delta = 1.0f;
+	float Etha = 1.0f;
+	float d0 = 5.0f;
 	float Uatr;
 	coord Fatr;
+	coord Frep;
 	coord nextPos;
 	float angleDirection;
+	coord obstacleCoord = {0.5f, 0.5f, 0.0f};
 	//End of added variables
 
  	printf("\n\n **************** Student State Machine *********************\n");
 
- 	for(j = 0;j < num_sensors/2;j++)
+ 	for(j = 0; j < num_sensors/2; j++)
  	{
         right_side = observations.sensors[j] + right_side;
         //printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
  	}
 
- 	for(j = num_sensors/2;j < num_sensors;j++)
+ 	for(j = num_sensors/2; j < num_sensors; j++)
  	{
         left_side = observations.sensors[j] + left_side;
         //printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
@@ -201,26 +208,23 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 
 	//----ADDED CODE----//
 	Uatr = (0.5) * E1 * (pow(coord_robot.xc - coord_dest.xc, 2) + pow(coord_robot.yc - coord_dest.yc, 2));
-	//Urep = ;
 	Fatr = {E1 * (coord_robot.xc - coord_dest.xc), E1 * (coord_robot.yc - coord_dest.yc), 0.0f};
-	Fu = unitaryVector(Fatr); //This counts as a direction vector
 	
+	//Repulsive force
+
+
+	//Direction vector
+	Fu = unitaryVector(Fatr);
+
 	//nextPos = q_(n+1)
 	nextPos.xc = coord_robot.xc - delta * Fu.xc; 
 	nextPos.yc = coord_robot.yc - delta * Fu.yc;
 
-	//Direction vector
-	
-
 	//Vector movement applied
 	gen_vector = MoveRobot(0.01, Fu.anglec - coord_robot.anglec);	
 
-	//	printf("%f\n", angleDirection);
-	//	printf("%f", coord_robot.anglec);
-	
-	//Coordenadas: coord_robot, coord coord_dest
 	//----END OF ADDED CODE----// <>
- 	
+
 	return gen_vector;
 }
 

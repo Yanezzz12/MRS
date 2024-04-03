@@ -12,58 +12,51 @@
 //#define TYPE_0 2
 #define TYPE_0 0
 
-
 extern float K_INTENSITY;
 
-
 // it writes the sensors' readings to be plot by Tk
-int write_obs_sensor(FILE *fpw,Raw observations,char *sensor,int num_sensors, float start_angle,float range){
- int j;
+int write_obs_sensor(FILE *fpw,Raw observations,char *sensor,int num_sensors, float start_angle,float range)
+{
+        int j;
+        fprintf(fpw,"( sensor %s %d %f %f",sensor,num_sensors,range,start_angle); 
 
+        for(j=0;j<num_sensors;j++)
+        {
+                fprintf(fpw," %f",observations.sensors[j]);
+                //printf("laser[%d] %f\n",j,observations.sensors[j]);
+        }
 
- fprintf(fpw,"( sensor %s %d %f %f",sensor,num_sensors,range,start_angle); 
+        fprintf(fpw," )\n");
+        //printf("\n");
 
- for(j=0;j<num_sensors;j++){
-        fprintf(fpw," %f",observations.sensors[j]);
-        //printf("laser[%d] %f\n",j,observations.sensors[j]);
- }
-
- fprintf(fpw," )\n");
- //printf("\n");
-
- return(1);
+        return(1);
 }
 
+//It saves the sensor data to be used by the VQ 
+int write_sensor_data(FILE *fp_sensors, float intensity, float angle_light, int num_sensors, Raw observations, int flg_inte_quad)
+{
+        int j;
 
-// it saves the sensor data to be used by the VQ 
- int write_sensor_data(FILE *fp_sensors, float intensity, float angle_light, int num_sensors, Raw observations, int flg_inte_quad){
+        fprintf(fp_sensors,"(");
 
- int j;
+        if(flg_inte_quad == 1)
+        {
+ 	        fprintf(fp_sensors," %f %f",intensity,angle_light);
+ 	        //printf("intensity %f angle_light %f\n",intensity,angle_light);
+        }
 
+        for(j=0;j<num_sensors;j++)
+        {
+                fprintf(fp_sensors," %f",observations.sensors[j]);
+                //printf("write sensors[%d] %f\n",j,observations.sensors[j]);
+        }
 
- fprintf(fp_sensors,"(");
-
- if(flg_inte_quad == 1){
- 	fprintf(fp_sensors," %f %f",intensity,angle_light);
- 	//printf("intensity %f angle_light %f\n",intensity,angle_light);
- }
-
- for(j=0;j<num_sensors;j++){
-        fprintf(fp_sensors," %f",observations.sensors[j]);
-        //printf("write sensors[%d] %f\n",j,observations.sensors[j]);
- }
-
- fprintf(fp_sensors," ) \n");
-
-
- return(1);
+        fprintf(fp_sensors," ) \n");
+        return(1);
 }
 
-
-
-
-float magnitude(coord vector){
-
+float magnitude(coord vector)
+{
         float magnitude;
 
         magnitude=(float)sqrt((vector.xc*vector.xc)+(vector.yc*vector.yc));
@@ -71,11 +64,8 @@ float magnitude(coord vector){
         return(magnitude);
 }
 
-
-
-
-coord dif_vectors(coord vector1,coord vector2){
-
+coord dif_vectors(coord vector1,coord vector2)
+{
         coord dif;
 
         dif.xc=vector1.xc-vector2.xc;
@@ -84,14 +74,16 @@ coord dif_vectors(coord vector1,coord vector2){
 }
 
 // This function is used to calculate the rotation angle for the Mvto command
-float get_angle(float ang,float c,float d,float X,float Y){
+float get_angle(float ang,float c,float d,float X,float Y)
+{
         float x,y;
 
         x=c-X;
         y=d-Y;
         if((x == 0) && (y == 0)) return(0);
         if(fabs(x)<0.0001)      return((float) ((y<0.0f)? 3*PI/2  : PI/2) - ang );
-        else{
+        else
+        {
                 if(x>=0.0f&&y>=0.0f) return( (float)(atan(y/x)-ang) );
                 else if(x< 0.0f&&y>=0.0f) return( (float)(atan(y/x)+PI-ang) );
                 else if(x< 0.0f&&y<0.0f) return( (float)(atan(y/x)+PI-ang) );
@@ -99,243 +91,220 @@ float get_angle(float ang,float c,float d,float X,float Y){
         }
 }
 
+void get_intensity_angle(coord coord_robot,coord coord_destination, float *intensity, float *light_angle)
+{
+        coord attraction_force;
+        float mag;
+        coord dif;
+        float theta;
+        float angle;
 
+        theta = coord_robot.anglec;
 
-void get_intensity_angle(coord coord_robot,coord coord_destination, float *intensity, float *light_angle){
+        dif = dif_vectors(coord_robot,coord_destination);
 
- coord attraction_force;
- float mag;
- coord dif;
- float theta;
- float angle;
+        angle = get_angle(0,0,0,dif.xc,dif.yc);
+        angle = angle - theta;
+        if(angle < 0) angle = 2*PI + angle;
+        #ifdef DEBUG
+                printf("light source angle %f\n",angle);
+        #endif
+        *light_angle = angle;
 
-
- theta=coord_robot.anglec;
-
- dif=dif_vectors(coord_robot,coord_destination);
-
- angle=get_angle(0,0,0,dif.xc,dif.yc);
- angle=angle - theta;
- if(angle < 0) angle = 2*PI + angle;
-#ifdef DEBUG
- printf("light source angle %f\n",angle);
-#endif
- *light_angle = angle;
-
- attraction_force=dif_vectors(coord_robot,coord_destination);
- mag=magnitude(attraction_force);
- *intensity=1/(mag*mag);
- 
+        attraction_force=dif_vectors(coord_robot,coord_destination);
+        mag=magnitude(attraction_force);
+        *intensity=1/(mag*mag);
 }
 
-
-
-
- // It quantizes the intensity 
+// It quantizes the intensity 
 //int quantize_intensity(coord coord_robot,coord coor_destination,float intensity,int flg){
-int quantize_intensity(float intensity,int flg){
+int quantize_intensity(float intensity,int flg)
+{
+        int value=0;
+        coord attraction_force;
+        float mag;
 
- int value=0;
- coord attraction_force;
- float mag;
+        //attraction_force=dif_vectors(coord_robot,coor_destination);
+        //mag=magnitude(attraction_force);
+        //*intensity=1/(mag*mag);
+        //printf("intensity %f k_INTENSITY %f\n",mag,K_INTENSITY);
 
- //attraction_force=dif_vectors(coord_robot,coor_destination);
- //mag=magnitude(attraction_force);
- //*intensity=1/(mag*mag);
- //printf("intensity %f k_INTENSITY %f\n",mag,K_INTENSITY);
+        mag= sqrt(1/intensity);
+        
+        if(flg == 0){
+                if(mag > K_INTENSITY){
+                        value = 0;
+                }
+                else{
+                        value = 1;
+                }
+        }
+        else{
+                if(mag > K_INTENSITY*4){
+                        value = 0;
+                }
+                else if(mag > K_INTENSITY*3){
+                        value = 1;
+                }
+                else if(mag > K_INTENSITY*2){
+                        value = 2;
+                }
+                else{
+                        value = 3;
+                }
+        }
 
- mag= sqrt(1/intensity);
- 
- if(flg == 0){
- 	if(mag > K_INTENSITY){
-        	value = 0;
- 	}
- 	else{
-         	value = 1;
- 	}
- }
- else{
- 	if(mag > K_INTENSITY*4){
-        	value = 0;
- 	}
- 	else if(mag > K_INTENSITY*3){
-         	value = 1;
- 	}
- 	else if(mag > K_INTENSITY*2){
-         	value = 2;
- 	}
- 	else{
-        	value = 3;
- 	}
- }
-
-
- return value;
-
+        return value;
 }
 
 
  // It quantizes the intensity 
 int quantize_intensity_vector(coord coord_robot,coord coor_destination,float *intensity){
 
- int value=0;
- coord attraction_force;
- float mag;
+        int value=0;
+        coord attraction_force;
+        float mag;
 
- attraction_force=dif_vectors(coord_robot,coor_destination);
- mag=magnitude(attraction_force);
- *intensity=1/(mag*mag);
- //printf("intensity %f k_INTENSITY %f\n",mag,K_INTENSITY);
+        attraction_force=dif_vectors(coord_robot,coor_destination);
+        mag=magnitude(attraction_force);
+        *intensity=1/(mag*mag);
+        //printf("intensity %f k_INTENSITY %f\n",mag,K_INTENSITY);
 
- if(mag > K_INTENSITY*4){
-        value = 0;
- }
- else if(mag > K_INTENSITY*3){
-         value = 1;
- }
- else if(mag > K_INTENSITY*2){
-         value = 2;
- }
- else{
-	value = 3;
- }
+        if(mag > K_INTENSITY*4){
+                value = 0;
+        }
+        else if(mag > K_INTENSITY*3){
+                value = 1;
+        }
+        else if(mag > K_INTENSITY*2){
+                value = 2;
+        }
+        else{
+                value = 3;
+        }
 
-
- return value;
-
+        return value;
 }
 
 
 
 // it gets the range from the laser sensors
-void get_average_sensor(Raw observations, int start, int end, float *average){
- int i;
- float sd=0;
+void get_average_sensor(Raw observations, int start, int end, float *average)
+{
+        int i;
+        float sd=0;
 
- //printf("range %d %d\n",start,end); 
- for(i=start; i < end;i++){
-        sd=sd + observations.sensors[i];
-        //printf("%d %f %f\n",i,sd,observations.sensors[i]); 
- }
+        //printf("range %d %d\n",start,end); 
+        for(i=start; i < end;i++)
+        {
+                sd=sd + observations.sensors[i];
+                //printf("%d %f %f\n",i,sd,observations.sensors[i]); 
+        }
 
- *average = sd/(float)(end-start);
- //printf(" average %f\n\n",*average);
+        *average = sd/(float)(end-start);
+        //printf(" average %f\n\n",*average);
 }
 
 
  // It quantizes the inputs
-int quantize_inputs(Raw observations, int size_vectors, int flg, int size_quantizer, char *path){
+int quantize_inputs(Raw observations, int size_vectors, int flg, int size_quantizer, char *path)
+{
+        int value = 0;
+        int i;
+        float left,right;
+        int interval = size_vectors/2;
+        static int num_centroids;
+        static Centroid *centroids;
+        static int flg_first = 1;
+        char centroid_file[200];
+        float dst;
+        int ofst =- 1;
 
- int value=0;
- int i;
- float left,right;
- int interval = size_vectors/2;
- static int num_centroids;
- static Centroid *centroids;
- static int flg_first = 1;
- char centroid_file[200];
- float dst;
- int ofst=-1;
+        if(flg == 0)
+        {
+                get_average_sensor(observations,interval,size_vectors,&left);
+                //printf("left sensor %f\n",left);
+                get_average_sensor(observations,0,interval,&right);
+                //printf("right sensor %f\n",right);
 
+                if( left < THRS_SENSOR) value = (value << 1) + 1;
+                else value = (value << 1) + 0;
 
+                if( right < THRS_SENSOR) value = (value << 1) + 1;
+                else value = (value << 1) + 0;
 
- if(flg == 0){
- 	get_average_sensor(observations,interval,size_vectors,&left);
- 	//printf("left sensor %f\n",left);
- 	get_average_sensor(observations,0,interval,&right);
- 	//printf("right sensor %f\n",right);
-
- 	if( left < THRS_SENSOR) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
-
- 	if( right < THRS_SENSOR) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
-
- 	//printf("value %d\n",value);
- 	value = value & 0xFFFFFFFF;
- 	//printf("value %x\n",value); 
- }
-
- return(value);
-
+                //printf("value %d\n",value);
+                value = value & 0xFFFFFFFF;
+                //printf("value %x\n",value); 
+        }
+        return(value);
 }
 
 
  // It quantizes the destination this later 2-1-11
 //int quantize_destination(coord coord_robot,coord coord_destination, float light_angle, int flg){
-int quantize_destination(float angle, int flg){
+int quantize_destination(float angle, int flg)
+{
+        int value=0;
+        //float angle;
+        coord dif;
+        float theta;
 
- int value=0;
- //float angle;
- coord dif;
- float theta;
- 
- 
- //theta=coord_robot.anglec;
- //printf("pose x %f y %f theta %f dest x %f y %f\n",coord_robot.xc,coord_robot.yc,theta,coord_destination.xc,coord_destination.yc);
+        //theta=coord_robot.anglec;
+        //printf("pose x %f y %f theta %f dest x %f y %f\n",coord_robot.xc,coord_robot.yc,theta,coord_destination.xc,coord_destination.yc);
 
- /*
- dif=dif_vectors(coord_robot,coord_destination);
- angle=get_angle(0,0,0,dif.xc,dif.yc);
- //angle=get_angle(0,0,0,coord_destination.xc,coord_destination.yc);
- //printf("angle %f\n",angle);
- angle=angle - theta;
- if(angle < 0) angle = 2*PI + angle;
- printf("light source angle %f\n",angle);
- *light_angle = angle;
- */
+        /*
+        dif=dif_vectors(coord_robot,coord_destination);
+        angle=get_angle(0,0,0,dif.xc,dif.yc);
+        //angle=get_angle(0,0,0,coord_destination.xc,coord_destination.yc);
+        //printf("angle %f\n",angle);
+        angle=angle - theta;
+        if(angle < 0) angle = 2*PI + angle;
+        printf("light source angle %f\n",angle);
+        *light_angle = angle;
+        */
 
- if(flg==0){
- 	if( angle < PI / 2) value = 3;
- 	else if ( angle < PI ) value = 1;
- 	else if( angle < 3*PI/2) value = 0;
- 	else value = 2;
- }
- else{
-        if( angle < PI / 4) value = 0;
-        else if ( angle < PI/2 ) value = 1;
-        else if( angle < 3*PI/4) value = 2;
-        else if( angle < PI) value = 3;
-        else if( angle < 5*PI/4) value = 4;
-        else if( angle < 6*PI/4) value = 5;
-        else if( angle < 7*PI/4) value = 6;
-        else value = 7;
- }
-
-
- return value;
-
+        if(flg==0)
+        {
+                if( angle < PI / 2) value = 3;
+                else if ( angle < PI ) value = 1;
+                else if( angle < 3*PI/2) value = 0;
+                else value = 2;
+        }
+        else
+        {
+                if( angle < PI / 4) value = 0;
+                else if ( angle < PI/2 ) value = 1;
+                else if( angle < 3*PI/4) value = 2;
+                else if( angle < PI) value = 3;
+                else if( angle < 5*PI/4) value = 4;
+                else if( angle < 6*PI/4) value = 5;
+                else if( angle < 7*PI/4) value = 6;
+                else value = 7;
+        }
+        return value;
 }
-
-
-
 
 // It get the angle of the quantized source light
-float inverse_quantize_destination(int value){
+float inverse_quantize_destination(int value)
+{
+        float angle;
 
- float angle;
+        if(value == 0)      angle = PI / 4;
+        else if(value == 1) angle = PI/2;
+        else if(value == 2) angle =3*PI/4;
+        else if(value == 3) angle = PI;
+        else if(value == 4) angle = 5*PI/4;
+        else if(value == 5) angle = 6*PI/4;
+        else if(value == 6) angle = 7*PI/4;
+        else if(value == 7) angle = 0;
+        else angle = 0;
 
- if(value == 0)      angle = PI / 4;
- else if(value == 1) angle = PI/2;
- else if(value == 2) angle =3*PI/4;
- else if(value == 3) angle = PI;
- else if(value == 4) angle = 5*PI/4;
- else if(value == 5) angle = 6*PI/4;
- else if(value == 6) angle = 7*PI/4;
- else if(value == 7) angle = 0;
- else angle = 0;
-
- return angle;
-
+        return angle;
 }
 
-
-
-
-
-
-coord divide_vector_scalar(coord vector1,float cnt){
-
+coord divide_vector_scalar(coord vector1,float cnt)
+{
         coord div;
 
         div.xc=vector1.xc/cnt;
@@ -343,239 +312,237 @@ coord divide_vector_scalar(coord vector1,float cnt){
         return(div);
 }
 
+//It gets an unit vector
+coord get_unit_vector(Behavior Bvector)
+{
+        float mag;
+        coord unit_vector,vector;
 
+        unit_vector.xc=0;
+        unit_vector.yc=0;
 
-// it gets an unit vector
-coord get_unit_vector(Behavior Bvector){
+        vector.xc=Bvector.xc;
+        vector.yc=Bvector.yc;
 
- float mag;
- coord unit_vector,vector;
+        mag=magnitude(vector);
 
- unit_vector.xc=0;
- unit_vector.yc=0;
+        if(mag != 0)
+                unit_vector=divide_vector_scalar(vector,mag);
 
- vector.xc=Bvector.xc;
- vector.yc=Bvector.yc;
-
- mag=magnitude(vector);
-
- if(mag != 0)
-        unit_vector=divide_vector_scalar(vector,mag);
-
- return unit_vector;
-
+        return unit_vector;
 }
 
 
 // it returns the distance to closest poligon from the robot
-int shs_distance_obstacle(float x1, float y1, float x2, float y2,float dist_advance, int *indx, int flg){
+int shs_distance_obstacle(float x1, float y1, float x2, float y2,float dist_advance, int *indx, int flg)
+{
+        int index = 0;
+        float distance;
 
- int index=0;
- float distance;
+        index=0;
+        robot_sensor.vertex[1].x=x1;
+        robot_sensor.vertex[1].y=y1;
+        robot_sensor.vertex[2].x=x2+0.0001;
+        robot_sensor.vertex[2].y=y2+0.0001;
 
+        //printf("check x1 %f y1 %f\n",robot_sensor.vertex[1].x,robot_sensor.vertex[1].y);
+        ////printf("check x2 %f y2 %f\n",robot_sensor.vertex[2].x,robot_sensor.vertex[2].y);
 
-  index=0;
-  robot_sensor.vertex[1].x=x1;
-  robot_sensor.vertex[1].y=y1;
-  robot_sensor.vertex[2].x=x2+0.0001;
-  robot_sensor.vertex[2].y=y2+0.0001;
+        //m=(y2-y1)/(x2-x1);
+        //b=(x2*y1-y2*x1)/(x2-x1);
+        robot_sensor.line[1].m= (robot_sensor.vertex[2].y-robot_sensor.vertex[1].y)/
+                                (robot_sensor.vertex[2].x-robot_sensor.vertex[1].x);
+        robot_sensor.line[1].b= (robot_sensor.vertex[2].x*robot_sensor.vertex[1].y-
+                                robot_sensor.vertex[2].y*robot_sensor.vertex[1].x)/
+                                (robot_sensor.vertex[2].x-robot_sensor.vertex[1].x);
 
-  //printf("check x1 %f y1 %f\n",robot_sensor.vertex[1].x,robot_sensor.vertex[1].y);
-  ////printf("check x2 %f y2 %f\n",robot_sensor.vertex[2].x,robot_sensor.vertex[2].y);
+        // it finds the distance to the closest polygon, distance_polygon function is in ../simulator/simulation.h
+        if(flg == 0)
+                distance=distance_polygon(num_polygons_wrl,polygons_wrl,robot_sensor,&index);
+        else 
+                distance=distance_polygon(num_polygons_unk+1,polygons_unk,robot_sensor,&index);
 
-  //m=(y2-y1)/(x2-x1);
-  //b=(x2*y1-y2*x1)/(x2-x1);
-  robot_sensor.line[1].m= (robot_sensor.vertex[2].y-robot_sensor.vertex[1].y)/
-                        (robot_sensor.vertex[2].x-robot_sensor.vertex[1].x);
-  robot_sensor.line[1].b= (robot_sensor.vertex[2].x*robot_sensor.vertex[1].y-
-                         robot_sensor.vertex[2].y*robot_sensor.vertex[1].x)/
-                        (robot_sensor.vertex[2].x-robot_sensor.vertex[1].x);
+        *indx = index;
 
-
-
-
-  // it finds the distance to the closest polygon, distance_polygon function is in ../simulator/simulation.h
-  if(flg == 0)
-  	distance=distance_polygon(num_polygons_wrl,polygons_wrl,robot_sensor,&index);
-  else 
-  	distance=distance_polygon(num_polygons_unk+1,polygons_unk,robot_sensor,&index);
-
-  *indx = index;
-
-//#ifdef DEBUG
-  //printf("distance_polygon %d  polygon name %s distance %f\n",index,polygons_wrl[index].name,distance);
-  //printf("** check distance closests %f distance advance %f **\n",distance,fabs(dist_advance));
-//#endif
+        //#ifdef DEBUG
+        //printf("distance_polygon %d  polygon name %s distance %f\n",index,polygons_wrl[index].name,distance);
+        //printf("** check distance closests %f distance advance %f **\n",distance,fabs(dist_advance));
+        //#endif
 
 
- if(distance > fabs(dist_advance)){
-        return 0;
- }else{
-        return 1;
- }
-
+        if(distance > fabs(dist_advance))
+        {
+                return 0;
+        }
+        else
+        {
+                return 1;
+        }
 }
-
-
 
 // it will move the robot the desire angle and distance
-int  mvrobot(FILE *fpw,AdvanceAngle DistTheta,coord *coord_robot ){
- int flg=0;
- int flg_unk=0;
- float new_xmv,new_ymv,new_thetamv;
- float xc,yc;
- float speed;
- coord new_coord;
- float xmv,ymv,thetamv;
- float distance, angle1;
- int dummy;
- float cnt=3.0;
- int indx=0;
- int flag = 0;
- int flag_unk = 1;
+int  mvrobot(FILE *fpw,AdvanceAngle DistTheta,coord *coord_robot )
+{
+        int flg=0;
+        int flg_unk=0;
+        float new_xmv,new_ymv,new_thetamv;
+        float xc,yc;
+        float speed;
+        coord new_coord;
+        float xmv,ymv,thetamv;
+        float distance, angle1;
+        int dummy;
+        float cnt=3.0;
+        int indx=0;
+        int flag = 0;
+        int flag_unk = 1;
 
+        xmv=coord_robot->xc;
+        ymv=coord_robot->yc;
+        thetamv=coord_robot->anglec;
 
- xmv=coord_robot->xc;
- ymv=coord_robot->yc;
- thetamv=coord_robot->anglec;
+        angle1 = DistTheta.angle;
+        distance = DistTheta.distance;
 
- angle1 = DistTheta.angle;
- distance = DistTheta.distance;
+        //#ifdef DEBUG
+        //printf("before x:%f, y:%f,  rad:%f\n",coord_robot->xc,coord_robot->yc,coord_robot->anglec);
+        //printf("Distance %f before angle1 %f\n",distance,angle1);
+        //#endif
 
-//#ifdef DEBUG
- //printf("before x:%f, y:%f,  rad:%f\n",coord_robot->xc,coord_robot->yc,coord_robot->anglec);
- //printf("Distance %f before angle1 %f\n",distance,angle1);
-//#endif
+        new_thetamv = thetamv + angle1;
 
-
- new_thetamv = thetamv + angle1;
-
- //if(distance > 0.){
+        //if(distance > 0.){
  	new_xmv = xmv + (float) distance*(float)cos((float) (new_thetamv));
  	new_ymv = ymv + (float) distance*(float)sin((float) (new_thetamv));
- //}
- //else{
- 	//new_xmv = xmv - (float) cnt*distance*(float)cos((float) (new_thetamv));
- 	//new_ymv = ymv - (float) cnt*distance*(float)sin((float) (new_thetamv));
-//}
+        //}
+        //else{
+                //new_xmv = xmv - (float) cnt*distance*(float)cos((float) (new_thetamv));
+                //new_ymv = ymv - (float) cnt*distance*(float)sin((float) (new_thetamv));
+        //}
 
-// #ifdef DEBUG
-// printf("new_thetamv %f\n",new_thetamv);
-// printf("new_xmv %f new_ymv %f\n",new_xmv,new_ymv);
-//#endif
+        // #ifdef DEBUG
+        // printf("new_thetamv %f\n",new_thetamv);
+        // printf("new_xmv %f new_ymv %f\n",new_xmv,new_ymv);
+        //#endif
 
- // it checks if the robot new position is inside an obstacle
- //flg = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,.5,&indx);
- flg = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,cnt*distance,&indx,0);
- if(num_polygons_unk > 0) 
-	flg_unk = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,cnt*distance,&indx,1);
+        // it checks if the robot new position is inside an obstacle
+        //flg = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,.5,&indx);
+        flg = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,cnt*distance,&indx,0);
+        if(num_polygons_unk > 0) 
+        	flg_unk = shs_distance_obstacle(xmv,ymv,new_xmv,new_ymv,cnt*distance,&indx,1);
 
-//#ifdef DEBUG
- //printf("check inside flg %d x:%.3f, y:%.3f,  rad:%.3f polygon  %d polygon name %s\n",flg,new_xmv,new_ymv,new_thetamv,indx,polygons_wrl[indx].name);
-//#endif
+        //#ifdef DEBUG
+        //printf("check inside flg %d x:%.3f, y:%.3f,  rad:%.3f polygon  %d polygon name %s\n",flg,new_xmv,new_ymv,new_thetamv,indx,polygons_wrl[indx].name);
+        //#endif
 
- //flg = check_inside_polygon(new_xmv,new_ymv,polygons_wrl,indx);
+        //flg = check_inside_polygon(new_xmv,new_ymv,polygons_wrl,indx);
 
- flag = inside_polygon(num_polygons_wrl,polygons_wrl,new_xmv,new_ymv,&indx);
- //printf("num_polygons_unk %d\n",num_polygons_unk);
- if(num_polygons_unk > 0) 
- 	flag_unk = inside_polygon(num_polygons_unk+1,polygons_unk,new_xmv,new_ymv,&indx);
+        flag = inside_polygon(num_polygons_wrl,polygons_wrl,new_xmv,new_ymv,&indx);
+        //printf("num_polygons_unk %d\n",num_polygons_unk);
+        if(num_polygons_unk > 0) 
+                flag_unk = inside_polygon(num_polygons_unk+1,polygons_unk,new_xmv,new_ymv,&indx);
 
- if(angle1 > 5.75f) angle1=- (angle1 - 5.75f) ;
- if(new_thetamv > 6.2832) new_thetamv = new_thetamv - (float) 6.2832;
- else if(new_thetamv < -0.0) new_thetamv = new_thetamv + (float) 6.2832;
+        if(angle1 > 5.75f) angle1=- (angle1 - 5.75f) ;
+        if(new_thetamv > 6.2832) new_thetamv = new_thetamv - (float) 6.2832;
+        else if(new_thetamv < -0.0) new_thetamv = new_thetamv + (float) 6.2832;
 
- new_xmv = xmv + (float) distance*(float)cos((float) (new_thetamv));
- new_ymv = ymv + (float) distance*(float)sin((float) (new_thetamv));
+        new_xmv = xmv + (float) distance*(float)cos((float) (new_thetamv));
+        new_ymv = ymv + (float) distance*(float)sin((float) (new_thetamv));
 
- //printf("flag %d flg %d flag_unk %d flg_unk %d\n",flag,flg,flag_unk,flg_unk);
- if((flag==1 && flg == 0) && ( flag_unk==1 && flg_unk == 0)){
- 	coord_robot->xc=new_xmv;
- 	coord_robot->yc=new_ymv;
- 	coord_robot->anglec=new_thetamv;
- }
- else{
-#ifdef DEBUG
- 	printf("robot inside polygon %d x:%.3f, y:%.3f,  rad:%.3f polygon  %d polygon name %s\n",flag,new_xmv,new_ymv,new_thetamv,indx,polygons_wrl[indx].name);
-        printf("The robot remains with the previous position\n");
-#endif
-        //printf("The robot remains with the previous position\n");
-	dummy=0;
-	fprintf(fpw,"( collision obstacle )\n");
- }
+        //printf("flag %d flg %d flag_unk %d flg_unk %d\n",flag,flg,flag_unk,flg_unk);
+        if((flag==1 && flg == 0) && ( flag_unk==1 && flg_unk == 0))
+        {
+                coord_robot->xc=new_xmv;
+                coord_robot->yc=new_ymv;
+                coord_robot->anglec=new_thetamv;
+        }
+        else
+        {
+                #ifdef DEBUG
+                printf("robot inside polygon %d x:%.3f, y:%.3f,  rad:%.3f polygon  %d polygon name %s\n",flag,new_xmv,new_ymv,new_thetamv,indx,polygons_wrl[indx].name);
+                printf("The robot remains with the previous position\n");
+        #endif
+                //printf("The robot remains with the previous position\n");
+                dummy=0;
+                fprintf(fpw,"( collision obstacle )\n");
+        }
 
-//#ifdef DEBUG
- //printf("after x:%f, y:%f,  rad:%f\n",coord_robot->xc,coord_robot->yc,coord_robot->anglec);
-//#endif
+        //#ifdef DEBUG
+        //printf("after x:%f, y:%f,  rad:%f\n",coord_robot->xc,coord_robot->yc,coord_robot->anglec);
+        //#endif
 
- return flg;
-
+        return flg;
 }
 
 
-float distance(coord vector,coord vector1){
+float distance(coord vector,coord vector1)
+{
+        float x,x1,y,y1;
+        float distance;
 
- float x,x1,y,y1;
- float distance;
+        x=vector.xc;
+        x1=vector1.xc;
+        y=vector.yc;
+        y1=vector1.yc;
 
- x=vector.xc;
- x1=vector1.xc;
- y=vector.yc;
- y1=vector1.yc;
+        // it calculates the distance
+        distance=(float)sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1));
+        //printf("Distance: %f\n",distance);
 
- // it calculates the distance
- distance=(float)sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1));
- //printf("Distance: %f\n",distance);
-
- return(distance);
+        return(distance);
 }
-
 
 // it quantizes a robot output
 AdvanceAngle quantize_output(float advance, float angle, float max_advance, float max_angle){
 
- AdvanceAngle output;
+        AdvanceAngle output;
 
- if(advance >= 0){
-	if(advance >= max_advance/2.0){
-               	output.distance = max_advance;
-	}
-	else{
-		output.distance = 0.0;
-	}
- }
- else{
-	if(fabs(advance) >= max_advance/2.0){
-               	output.distance=-max_advance;
-	}
-	else{
-		output.distance = 0.0;
-	}
- }
-
- if(angle >= 0){
-	if(angle < PI/2) {
-
-//        if(angle >= max_angle/2.0){
-                output.angle = max_angle;
+        if(advance >= 0)
+        {
+                if(advance >= max_advance/2.0)
+                {
+                        output.distance = max_advance;
+                }
+                else
+                {
+                        output.distance = 0.0;
+                }
         }
-	else if(angle > 3*PI/2){
-                output.angle = - max_angle;
+        else{
+                if(fabs(advance) >= max_advance/2.0)
+                {
+                        output.distance=-max_advance;
+                }
+                else
+                {
+                        output.distance = 0.0;
+                }
         }
- }
- else{  
-	if(fabs(angle) < PI/2){
-        //if(fabs(angle) >= max_angle/2.0){
-                output.angle=-max_angle;
+
+        if(angle >= 0)
+        {
+                if(angle < PI/2) 
+                {
+                        //if(angle >= max_angle/2.0){
+                        output.angle = max_angle;
+                }
+                else if(angle > 3*PI/2)
+                {
+                        output.angle = - max_angle;
+                }
         }
-	else if(fabs(angle) > 3*PI/2){
-                output.angle=max_angle;
+        else{  
+                if(fabs(angle) < PI/2)
+                {
+                //if(fabs(angle) >= max_angle/2.0){
+                        output.angle=-max_angle;
+                }
+                else if(fabs(angle) > 3*PI/2)
+                {
+                        output.angle=max_angle;
+                }
         }
- }
-
-
- return(output);
-
+        return(output);
 }
 
 
@@ -630,28 +597,26 @@ AdvanceAngle generate_output(int out,float advance, float angle){
 */
 
 
-int get_index_range(float obs, float r1, float r2, float r3){
+int get_index_range(float obs, float r1, float r2, float r3)
+{
+        int index = 0;
 
- int index = 0;
+        if((obs < r3) & (obs >= r2)){
+                index = 3;	
+        }
+        else if((obs < r2) & (obs >= r1)){
+                index = 2;	
+        }else if (obs < r1){
+                index = 1;
+        }
 
- if((obs < r3) & (obs >= r2)){
-	index = 3;	
- }
- else if((obs < r2) & (obs >= r1)){
-	index = 2;	
- }else if (obs < r1){
-	index = 1;
- }
-
- return index;
-
+        return index;
 }
 
 
-
-
 //void get_source(int quantized_attraction, float x, float y, int *j, int *k){
-void get_source(int quantized_attraction, int *j, int *k){
+void get_source(int quantized_attraction, int *j, int *k)
+{
 
 // Check how the quantized attraction value is generated in function quantize_destination in ..//utilities/utilities.h
 #ifdef DEBUG
@@ -1579,6 +1544,27 @@ void write_mdps(struct mdp_database mdp, char *path)
 
 }
 
+//Vector operation (1)
+coord vecAddition(coord vectorA, coord vectorB)
+{
+        coord resultantVector = {vectorA.xc + vectorB.xc, vectorA.yc + vectorB.yc, 0.0f};
+        return resultantVector;
+}
+
+//Vector operation (2)
+coord vecSubtraction(coord vectorA, coord vectorB)
+{
+        coord resultantVector = {vectorA.xc - vectorB.xc, vectorA.yc - vectorB.yc, 0.0f};
+        return resultantVector;
+}
+
+//Vector operation (3)
+coord vecEscalarMult(float escalar, coord vectorC)
+{
+        coord resultantVector = {escalar * vectorC.xc, escalar * vectorC.yc, vectorC.anglec};
+        return resultantVector;
+}
+
 //Function created by me (1)
 AdvanceAngle MoveRobot(float advance, float angle)
 {
@@ -1600,6 +1586,26 @@ coord unitaryVector(coord inputVector)
         uVector.anglec = atan2(inputVector.yc, inputVector.xc) * 180/PI;
 
         return uVector; 
+}
+
+//Function created by me (3)
+coord repulsiveForce(coord position, coord obstacle, float etha, float d0)
+{
+        coord repulsiveForceVector;
+        coord Dq;
+        coord Dq_u;
+        float IDqI;
+
+        Dq = vecSubtraction(position, obstacle);
+        Dq_u = unitaryVector(Dq);
+        IDqI = magnitude(Dq);
+
+        if(IDqI > d0)
+        {       repulsiveForceVector = {0.0f, 0.0f, 0.0f};      }
+        else
+        {       repulsiveForceVector = vecEscalarMult(-etha * (1/IDqI - 1/d0) * pow(IDqI, -2), Dq_u); }
+
+        return repulsiveForceVector;
 }
 
 //It generates a robot's output
