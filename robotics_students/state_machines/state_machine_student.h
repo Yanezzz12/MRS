@@ -33,7 +33,9 @@
 	gen_vector = generate_output(MOVEMENT,Mag_Advance,max_angle);
 	MOVEMENT: FORWARD/RIGHTADVANCETWICE/LEFTADVANCETWICE/RIGHTADVANCE/LEFTADVANCE
 //----END OF ADDED----*/
-
+#include <list>
+#include <iostream>
+using namespace std;
 
 
 float slopeEquation(float m, float b, float x)
@@ -154,6 +156,7 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 
 
 //Student State Machine 2 (python2.7 GUI_robotics_students.py 6)
+coord zeroVector = {0.0f, 0.0f, 0.0f};
 coord Fu = {0.00001, 0.00001f, 0.0f};
 coord previousPosition = {0.001f, 0.001f, 0.0f};
 AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest)
@@ -168,7 +171,7 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	//Added variables
 	float E1 = 0.5f;
 	float delta = 1.0f;
-	float Etha = 1.0f;
+	float Etha = 0.00015f;
 	float d0 = 5.0f;
 	float Uatr;
 	coord Fatr;
@@ -176,6 +179,7 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	coord nextPos;
 	float angleDirection;
 	coord obstacleCoord = {0.5f, 0.5f, 0.0f};
+	std::list<int> sensorDetection;
 	//End of added variables
 
  	printf("\n\n **************** Student State Machine *********************\n");
@@ -183,14 +187,25 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	for(j = 0; j < num_sensors/2; j++)
  	{
         right_side = observations.sensors[j] + right_side;
-        //printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
+        printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
+		if(observations.sensors[j] < 0.1)
+		{	sensorDetection.push_front(j); }
  	}
 
  	for(j = num_sensors/2; j < num_sensors; j++)
  	{
         left_side = observations.sensors[j] + left_side;
-        //printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
+        printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
+		if(observations.sensors[j] < 0.1)
+		{	sensorDetection.push_front(j); }
  	}
+	
+	//LIST DISPLAY
+    cout << endl << "Final List: ";
+    for(int number : sensorDetection) 
+	{	cout << number << ", ";	}
+	printf("\n");
+	//END OF DISPLAY
 
 	right_side = right_side/(num_sensors/2);
 	left_side = left_side/(num_sensors/2);
@@ -211,10 +226,11 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	Fatr = {E1 * (coord_robot.xc - coord_dest.xc), E1 * (coord_robot.yc - coord_dest.yc), 0.0f};
 	
 	//Repulsive force
-
+	Frep = repulsiveForce(coord_robot, obstacleCoord, Etha, d0);
 
 	//Direction vector
-	Fu = unitaryVector(Fatr);
+	Fu = vecAddition(Fatr, Frep);
+	Fu = unitaryVector(Fu);
 
 	//nextPos = q_(n+1)
 	nextPos.xc = coord_robot.xc - delta * Fu.xc; 
