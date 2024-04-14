@@ -1305,9 +1305,6 @@ void ocupancy_grid_mdp(Raw observations, int size, int attraction, struct mdp_da
 
 }
 
-
-
-
 void ocupancy_grid_mdp_old(Raw observations, int size, int attraction, struct mdp_database *mdp, float range_sensor){
 
  int i,j,jj,k;
@@ -1488,10 +1485,6 @@ void ocupancy_grid_mdp_old(Raw observations, int size, int attraction, struct md
 
 }
 
-
-
-
-
 /* Function that reads the mdp*/
 void write_mdps(struct mdp_database mdp, char *path)
 {
@@ -1544,6 +1537,8 @@ void write_mdps(struct mdp_database mdp, char *path)
 
 }
 
+
+
 //Vector operation (1)
 coord vecAddition(coord vectorA, coord vectorB)
 {
@@ -1580,14 +1575,17 @@ AdvanceAngle MoveRobot(float advance, float angle)
 //Function created by me (2)
 coord unitaryVector(coord inputVector)
 {
-        float magnitude; coord uVector = {0.0f, 0.0f, 0.0f};
+        coord uVector = {0.0f, 0.0f, 0.0f};
 
-        magnitude = sqrt(pow(inputVector.xc, 2) + pow(inputVector.yc, 2));
-        uVector.xc = inputVector.xc / magnitude;
-        uVector.yc = inputVector.yc / magnitude;
-        uVector.anglec = atan2(inputVector.yc, inputVector.xc) * 180/PI;
-
-        return uVector; 
+        if(magnitude(inputVector) != 0.0f)
+        {
+                uVector.xc = inputVector.xc / magnitude(inputVector);
+                uVector.yc = inputVector.yc / magnitude(inputVector);
+                uVector.anglec = atan2(inputVector.yc, inputVector.xc) * 180/PI;
+                return uVector; 
+        }
+        else
+        {       return inputVector;     } //Could change
 }
 
 //Function created by me (3)
@@ -1602,16 +1600,19 @@ coord repulsiveForce(coord position, coord obstacle, float etha, float d0)
         Dq_u = unitaryVector(Dq);
         IDqI = magnitude(Dq);
 
+        if(IDqI == 0.0f)
+        {       IDqI = 0.00001;         }
+
         if(IDqI > d0)
         {       repulsiveForceVector = {0.0f, 0.0f, 0.0f};      }
         else
-        {       repulsiveForceVector = vecEscalarMult(-etha * (1/IDqI - 1/d0) * pow(IDqI, -2), Dq_u); }
+        {       repulsiveForceVector = vecEscalarMult(-etha * (1/IDqI - 1/d0) * (1/pow(IDqI, 2)), Dq_u);        }
 
         return repulsiveForceVector;
 }
 
 //It generates a robot's output
-AdvanceAngle generate_output(int out,float advance, float angle)
+AdvanceAngle generate_output(int out, float advance, float angle)
 {
     AdvanceAngle output;
 

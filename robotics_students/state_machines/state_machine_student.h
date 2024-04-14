@@ -169,9 +169,9 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	int value = 0;
 
 	//Added variables
-	float E1 = 0.5f;
+	float E1 = 0.3f;
 	float delta = 1.0f;
-	float Etha = 0.00015f;
+	float Etha = 0.00015f; //0.00015
 	float d0 = 5.0f;
 	float Uatr;
 	coord Fatr;
@@ -234,7 +234,7 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	nextPos = vecSubtraction(coord_robot, vecEscalarMult(delta, Fu));
 
 	//Vector movement applied
-	gen_vector = MoveRobot(0.01, Fu.anglec - coord_robot.anglec);	
+	gen_vector = MoveRobot(0.008, Fu.anglec - coord_robot.anglec);	
 
 	//----END OF ADDED CODE----// <>
 
