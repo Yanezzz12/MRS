@@ -1548,6 +1548,7 @@ void write_mdps(struct mdp_database mdp, char *path)
 coord vecAddition(coord vectorA, coord vectorB)
 {
         coord resultantVector = {vectorA.xc + vectorB.xc, vectorA.yc + vectorB.yc, 0.0f};
+        resultantVector.anglec = atan2(resultantVector.yc, resultantVector.xc) * 180/PI;
         return resultantVector;
 }
 
@@ -1555,6 +1556,7 @@ coord vecAddition(coord vectorA, coord vectorB)
 coord vecSubtraction(coord vectorA, coord vectorB)
 {
         coord resultantVector = {vectorA.xc - vectorB.xc, vectorA.yc - vectorB.yc, 0.0f};
+        resultantVector.anglec = atan2(resultantVector.yc, resultantVector.xc) * 180/PI;
         return resultantVector;
 }
 

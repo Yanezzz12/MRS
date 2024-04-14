@@ -222,19 +222,16 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
 
 	//----ADDED CODE----//
-	Uatr = (0.5) * E1 * (pow(coord_robot.xc - coord_dest.xc, 2) + pow(coord_robot.yc - coord_dest.yc, 2));
-	Fatr = {E1 * (coord_robot.xc - coord_dest.xc), E1 * (coord_robot.yc - coord_dest.yc), 0.0f};
-	
+	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
+
 	//Repulsive force
 	Frep = repulsiveForce(coord_robot, obstacleCoord, Etha, d0);
 
 	//Direction vector
 	Fu = vecAddition(Fatr, Frep);
-	Fu = unitaryVector(Fu);
 
 	//nextPos = q_(n+1)
-	nextPos.xc = coord_robot.xc - delta * Fu.xc; 
-	nextPos.yc = coord_robot.yc - delta * Fu.yc;
+	nextPos = vecSubtraction(coord_robot, vecEscalarMult(delta, Fu));
 
 	//Vector movement applied
 	gen_vector = MoveRobot(0.01, Fu.anglec - coord_robot.anglec);	
