@@ -1,0 +1,5 @@
+echo touch GoTo_State_Machine.cpp
+touch GoTo_State_Machine.cpp
+echo make
+make
+

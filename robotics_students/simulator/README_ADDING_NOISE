@@ -1,0 +1,11 @@
+Adding noise specifications are in file /data/random_settings_advance_angle_sensors.dat
+0 means uniform distribution  and then it comes the range 
+1 means Gaussian distribution then is given the mean and variance  
+First Raw is for adding noise to the robot's advance.  
+Second raw is for adding noise to the robot's rotation. 
+Third  raw is for adding noise to the robot's sensors.
+Example:
+1 0.001 0.001
+0 -0.04 0.040
+0 -0.02 0.02
+
