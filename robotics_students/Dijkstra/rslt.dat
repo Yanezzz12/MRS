@@ -1,7 +1,0 @@
-Dijkstra -x 0.476121 -y 0.849756 -a 0.000000 -v 0.855000 -z 0.100000 -s laser -n 2 -t -0.200000 -r 0.400000 -p ../test_data_14/ -e random_4 -advance 0.040000 -MaxAngle 0.392699 -selection 1 -largest 0.000000 -noise 1 -omni 1 -vq 0 -size_vq 4 -pr_out 0
-0 node 20 x 0.443079 y 0.846048 accumulated 0.722025
-1 node 28 x 0.651571 y 0.466590 accumulated 0.289061
-2 node 0 x 0.712738 y 0.414848 accumulated 0.208945
-3 node 4 x 0.792426 y 0.341822 accumulated 0.100856
-4 node 3 x 0.711865 y 0.281145 accumulated 0.000000
-0.986145
