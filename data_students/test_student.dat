@@ -1,0 +1,60 @@
+../motion_planner/GoTo_State_Machine -x 1.135000 -y 1.505000 -a 0.000000 -v 1.000000 -z 1.840000 -s laser -n 16 -t -2.356100 -r 4.712200 -p ../../data_students/ -e random_14 -advance 0.040000 -MaxAngle 0.785400 -selection 7 -largest 0.100000 -noise 0 -omni 1 -vq 0 -size_vq 0 -pr_out 0 -out_file random_14 -nn_rec 0 -nn_unk 0
+
+observations file: ../../data_students/random_14.raw
+
+ Radio robot 0.030000 
+( origen 1.135000 1.505000 0.000000 )
+( destination 1.000000 1.840000 )
+
+
+ ************************************************************
+distance destination 0.361179 threshold 0.100800
+1 Pose robot 1.135000 1.505000 0.000000 
+range observations.sensors[0] 0.100000
+range observations.sensors[1] 0.100000
+range observations.sensors[2] 0.100000
+range observations.sensors[3] 0.100000
+range observations.sensors[4] 0.100000
+range observations.sensors[5] 0.100000
+range observations.sensors[6] 0.100000
+range observations.sensors[7] 0.100000
+range observations.sensors[8] 0.100000
+range observations.sensors[9] 0.100000
+range observations.sensors[10] 0.100000
+range observations.sensors[11] 0.100000
+range observations.sensors[12] 0.096190
+range observations.sensors[13] 0.096188
+range observations.sensors[14] 0.100000
+range observations.sensors[15] 0.100000
+light source angle 1.953873
+noised range sensors[0] 0.100000
+noised range sensors[1] 0.100000
+noised range sensors[2] 0.100000
+noised range sensors[3] 0.100000
+noised range sensors[4] 0.100000
+noised range sensors[5] 0.100000
+noised range sensors[6] 0.100000
+noised range sensors[7] 0.100000
+noised range sensors[8] 0.100000
+noised range sensors[9] 0.100000
+noised range sensors[10] 0.100000
+noised range sensors[11] 0.100000
+noised range sensors[12] 0.096190
+noised range sensors[13] 0.096188
+noised range sensors[14] 0.100000
+noised range sensors[15] 0.100000
+angle_light 1.953873 quantized destination 1 
+quantized inputs 0
+intensity 7.665771 quantized intensity 0 
+ Node 11 x 1.200000 y 1.510000
+ Node 10 x 1.200000 y 1.150000
+ Node 7 x 1.220000 y 0.950000
+ Node 5 x 0.925000 y 0.870000
+ Node 2 x 0.395000 y 0.870000
+ Node 1 x 0.155000 y 0.865000
+ Node 29 x 0.200000 y 1.150000
+ Node 33 x 0.200000 y 1.490000
+ Node 13 x 0.215000 y 1.800000
+Node 11 x 1.200000 y 1.510000
+First light 0: x = 1.200000  y = 1.510000 
+movement without noise: angle  0.000000 distance 0.000000
