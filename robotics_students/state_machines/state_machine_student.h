@@ -234,7 +234,7 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 	nextPos = vecSubtraction(coord_robot, vecEscalarMult(delta, Fu));
 
 	//Vector movement applied
-	gen_vector = MoveRobot(0.008, Fu.anglec - coord_robot.anglec);	
+	gen_vector = MoveRobot(0.008, Fu.anglec - coord_robot.anglec);
 
 	//----END OF ADDED CODE----// <>
 
