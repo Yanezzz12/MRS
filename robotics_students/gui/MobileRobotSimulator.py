@@ -9,7 +9,7 @@
 #						#
 ################################################# 
 
-import rospkg
+#import rospkg
 from Tkinter import *
 from tkFont import Font
 import threading
