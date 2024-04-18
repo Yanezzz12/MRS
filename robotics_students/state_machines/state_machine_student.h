@@ -159,7 +159,7 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 coord zeroVector = {0.0f, 0.0f, 0.0f};
 coord Fu = {0.00001, 0.00001f, 0.0f};
 coord previousPosition = {0.001f, 0.001f, 0.0f};
-AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest)
+AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest, float angle_light)
 {
  	AdvanceAngle gen_vector;
  	int obs;
@@ -221,11 +221,13 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	obs = value;
  	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
 
-	//----ADDED CODE----//
+	//----ADDED CODE----//	
+	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
 	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
 
 	//Repulsive force
 	Frep = repulsiveForce(coord_robot, obstacleCoord, Etha, d0);
+	Frep = zeroVector;
 
 	//Direction vector
 	Fu = vecAddition(Fatr, Frep);
@@ -235,6 +237,9 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 
 	//Vector movement applied
 	gen_vector = MoveRobot(0.008, Fu.anglec - coord_robot.anglec);
+	printf("Angle robot: %f\n", coord_robot.anglec);
+	printf("Angle light: %f\n", angle_light);
+	
 
 	//----END OF ADDED CODE----// <>
 

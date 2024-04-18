@@ -1611,6 +1611,35 @@ coord repulsiveForce(coord position, coord obstacle, float etha, float d0)
         return repulsiveForceVector;
 }
 
+//Function created by me (4)
+coord detectObstacle(coord currentPosition, int index, float sensorValue, int num_sensors)
+{
+        //Fixed values
+        float sensorRange = 4.7122 * 180/PI; 
+        float originAngleSensor = -2.3561 * 180/PI;
+        float angleBetweenSensor = sensorRange / num_sensors;
+
+        //Variables
+        coord obstacleCoords;
+        float proximity;
+        
+        //Mathematic model
+        proximity = -(sensorValue - 0.1) * 10;
+        //Computes sensorValue and returns proximity in range [0, 1]         
+
+        //Calculates obstacle aproximate position
+        /*TODO*/
+
+        /*
+        theta = currentPosition.anglec - angle;
+        obstacleCoords.xc = currentPosition.xc + sin(theta);
+        obstacleCoords.yc = currentPosition.yc + cos(theta);*/
+
+        return obstacleCoords; 
+}
+
+
+
 //It generates a robot's output
 AdvanceAngle generate_output(int out, float advance, float angle)
 {
