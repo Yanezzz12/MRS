@@ -159,6 +159,7 @@ AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float 
 coord zeroVector = {0.0f, 0.0f, 0.0f};
 coord Fu = {0.00001, 0.00001f, 0.0f};
 coord previousPosition = {0.001f, 0.001f, 0.0f};
+coord Frep = {0.0f, 0.0f, 0.0f};
 AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest, float angle_light)
 {
  	AdvanceAngle gen_vector;
@@ -184,20 +185,16 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
 
  	printf("\n\n **************** Student State Machine *********************\n");
 
- 	for(j = 0; j < num_sensors/2; j++)
+ 	for(j = 0; j < num_sensors/2; j++) //Redo this fragment
  	{
         right_side = observations.sensors[j] + right_side;
         printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
-		if(observations.sensors[j] < 0.1)
-		{	sensorDetection.push_front(j); }
  	}
 
  	for(j = num_sensors/2; j < num_sensors; j++)
  	{
         left_side = observations.sensors[j] + left_side;
         printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
-		if(observations.sensors[j] < 0.1)
-		{	sensorDetection.push_front(j); }
  	}
 	
 	//LIST DISPLAY
@@ -221,13 +218,19 @@ AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, i
  	obs = value;
  	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
 
-	//----ADDED CODE----//	
-	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
+	//----ADDED CODE----//
 	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
 
 	//Repulsive force
-	Frep = repulsiveForce(coord_robot, obstacleCoord, Etha, d0);
-	Frep = zeroVector;
+	for(j = 0; j < num_sensors; j++)
+	{
+		if(observations.sensors[j] < 0.1)
+		{
+			obstacleCoord = detectObstacle(coord_robot, j, observations.sensors[j], num_sensors);
+			Frep = vecAddition(Frep, repulsiveForce(coord_robot, obstacleCoord, Etha, d0));
+		}	
+	}
+	//Frep = zeroVector;
 
 	//Direction vector
 	Fu = vecAddition(Fatr, Frep);

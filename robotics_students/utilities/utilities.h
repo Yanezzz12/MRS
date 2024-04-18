@@ -1622,19 +1622,20 @@ coord detectObstacle(coord currentPosition, int index, float sensorValue, int nu
         //Variables
         coord obstacleCoords;
         float proximity;
-        
-        //Mathematic model
+        float theta;
+
+        //Mathematic model (Computes sensorValue and returns proximity in range [0, 1])
         proximity = -(sensorValue - 0.1) * 10;
-        //Computes sensorValue and returns proximity in range [0, 1]         
+
+        //AngleCalculation 
+        theta = currentPosition.anglec + originAngleSensor + (angleBetweenSensor * index); //(The sign could change due angle definition)
 
         //Calculates obstacle aproximate position
-        /*TODO*/
-
-        /*
-        theta = currentPosition.anglec - angle;
-        obstacleCoords.xc = currentPosition.xc + sin(theta);
-        obstacleCoords.yc = currentPosition.yc + cos(theta);*/
-
+        obstacleCoords.xc = currentPosition.xc + proximity * cos(theta);
+        obstacleCoords.yc = currentPosition.yc + proximity * sin(theta);
+        printf("Robot coords: %f, %f\n", currentPosition.xc, currentPosition.yc);
+        printf("Obstacle [%i], coords: %f, %f\n", index, obstacleCoords.xc, obstacleCoords.yc);
+        
         return obstacleCoords; 
 }
 

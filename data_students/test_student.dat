@@ -1,82 +1,4 @@
-../motion_planner/GoTo_State_Machine -x 0.665000 -y 0.090000 -a 0.000000 -v 0.605000 -z 0.772500 -s laser -n 16 -t -2.356100 -r 4.712200 -p ../../data_students/ -e obstacle -advance 0.040000 -MaxAngle 0.785400 -selection 6 -largest 0.100000 -noise 0 -omni 1 -vq 0 -size_vq 0 -pr_out 0 -out_file obstacle -nn_rec 0 -nn_unk 0
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.089775
-right side sensor[2] 0.080990
-right side sensor[3] 0.080991
-right side sensor[4] 0.089780
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 4, 3, 2, 1, 
-Average right side 0.092692
-Average left side 0.100000
-intensity 0 obstacles 0 dest 1
-Angle robot: 0.000000
-Angle light: 1.658483
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.090849
-left side sensor[13] 0.082869
-left side sensor[14] 0.083711
-left side sensor[15] 0.093849
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.093910
-intensity 0 obstacles 0 dest 2
-Angle robot: -78.822014
-Angle light: 80.469566
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.097918
-left side sensor[15] 0.089266
-
-Final List: 15, 14, 
-Average right side 0.100000
-Average left side 0.098398
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.452011
-Angle light: 81.093056
+../motion_planner/GoTo_State_Machine -x 0.732500 -y 0.187500 -a -111.688499 -v 0.630000 -z 0.790000 -s laser -n 16 -t -2.356100 -r 4.712200 -p ../../data_students/ -e obstacle -advance 0.040000 -MaxAngle 0.785400 -selection 6 -largest 0.100000 -noise 0 -omni 1 -vq 0 -size_vq 0 -pr_out 0 -out_file obstacle -nn_rec 0 -nn_unk 0
 
 
  **************** Student State Machine *********************
@@ -101,8 +23,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -79.834343
-Angle light: 81.472939
+Angle robot: -111.688499
+Angle light: 113.427811
 
 
  **************** Student State Machine *********************
@@ -127,8 +49,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -79.987183
-Angle light: 81.625099
+Angle robot: -173.716797
+Angle light: 175.450073
 
 
  **************** Student State Machine *********************
@@ -153,8 +75,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.039932
-Angle light: 81.677803
+Angle robot: -173.716797
+Angle light: 175.443893
 
 
  **************** Student State Machine *********************
@@ -179,8 +101,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.058159
-Angle light: 81.696213
+Angle robot: -173.716797
+Angle light: 175.437561
 
 
  **************** Student State Machine *********************
@@ -205,8 +127,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.065239
-Angle light: 81.703568
+Angle robot: -173.716797
+Angle light: 175.431091
 
 
  **************** Student State Machine *********************
@@ -231,8 +153,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.068932
-Angle light: 81.707596
+Angle robot: -173.716797
+Angle light: 175.424454
 
 
  **************** Student State Machine *********************
@@ -257,8 +179,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.071770
-Angle light: 81.710808
+Angle robot: -173.716797
+Angle light: 175.417648
 
 
  **************** Student State Machine *********************
@@ -283,8 +205,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.074577
-Angle light: 81.714035
+Angle robot: -173.716797
+Angle light: 175.410675
 
 
  **************** Student State Machine *********************
@@ -309,8 +231,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.077614
-Angle light: 81.717545
+Angle robot: -173.716797
+Angle light: 175.403534
 
 
  **************** Student State Machine *********************
@@ -335,8 +257,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.080986
-Angle light: 81.721443
+Angle robot: -173.716797
+Angle light: 175.396210
 
 
  **************** Student State Machine *********************
@@ -361,8 +283,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.084793
-Angle light: 81.725845
+Angle robot: -173.716797
+Angle light: 175.388702
 
 
  **************** Student State Machine *********************
@@ -387,8 +309,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.089088
-Angle light: 81.730820
+Angle robot: -173.716797
+Angle light: 175.380997
 
 
  **************** Student State Machine *********************
@@ -413,8 +335,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.093925
-Angle light: 81.736412
+Angle robot: -173.716797
+Angle light: 175.373093
 
 
  **************** Student State Machine *********************
@@ -439,8 +361,8 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.099403
-Angle light: 81.742744
+Angle robot: -173.716797
+Angle light: 175.364975
 
 
  **************** Student State Machine *********************
@@ -465,8 +387,36 @@ Final List:
 Average right side 0.100000
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.105591
-Angle light: 81.749908
+Angle robot: -173.716797
+Angle light: 175.356659
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.100000
+left side sensor[8] 0.095123
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.100000
+Average left side 0.099390
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.660683, 0.283637
+Obstacle [8], coords: 0.631492, 0.322711
+Angle robot: -173.716797
+Angle light: 175.348114
 
 
  **************** Student State Machine *********************
@@ -490,9 +440,37 @@ left side sensor[15] 0.100000
 Final List: 
 Average right side 0.100000
 Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+Angle robot: 173.716797
+Angle light: -165.812363
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.100000
+left side sensor[8] 0.095123
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.100000
+Average left side 0.099390
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.112617
-Angle light: 81.758034
+Robot coords: 0.651107, 0.283637
+Obstacle [8], coords: 0.621921, 0.322706
+Angle robot: -173.716797
+Angle light: 175.329254
 
 
  **************** Student State Machine *********************
@@ -516,14 +494,44 @@ left side sensor[15] 0.100000
 Final List: 
 Average right side 0.100000
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.120560
-Angle light: 81.767227
+intensity 0 obstacles 0 dest 3
+Angle robot: 173.716797
+Angle light: -165.830994
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.089145
+left side sensor[8] 0.095124
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.098643
+Average left side 0.099391
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.641532, 0.283637
+Obstacle [7], coords: 0.587149, 0.189691
+Robot coords: 0.641532, 0.283637
+Obstacle [8], coords: 0.612350, 0.322700
+Angle robot: -173.716797
+Angle light: 175.310364
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.083071
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -540,16 +548,48 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.097884
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.129547
-Angle light: 81.777641
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.636744, 0.277228
+Obstacle [1], coords: 0.734922, 0.139317
+Angle robot: 173.716797
+Angle light: -165.849655
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.074995
+left side sensor[8] 0.095125
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.096874
+Average left side 0.099391
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.631956, 0.283637
+Obstacle [7], coords: 0.506685, 0.067232
+Robot coords: 0.631956, 0.283637
+Obstacle [8], coords: 0.602778, 0.322695
+Angle robot: -173.716797
+Angle light: 175.291458
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.081136
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -566,16 +606,48 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.097642
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.139694
-Angle light: 81.789406
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.627168, 0.277228
+Obstacle [1], coords: 0.736568, 0.123554
+Angle robot: 173.716797
+Angle light: -165.868332
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.074996
+left side sensor[8] 0.095125
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.096874
+Average left side 0.099391
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.622381, 0.283637
+Obstacle [7], coords: 0.497112, 0.067236
+Robot coords: 0.622381, 0.283637
+Obstacle [8], coords: 0.593207, 0.322689
+Angle robot: -173.716797
+Angle light: 175.272552
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.081137
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -592,16 +664,50 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.097642
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.151146
-Angle light: 81.802704
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.617593, 0.277228
+Obstacle [1], coords: 0.726988, 0.123559
+Angle robot: 173.716797
+Angle light: -165.887009
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.075460
+right side sensor[7] 0.074996
+left side sensor[8] 0.095126
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.093807
+Average left side 0.099391
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.612805, 0.283637
+Obstacle [6], coords: 0.856436, 0.254184
+Robot coords: 0.612805, 0.283637
+Obstacle [7], coords: 0.487539, 0.067241
+Robot coords: 0.612805, 0.283637
+Obstacle [8], coords: 0.583635, 0.322683
+Angle robot: -173.716797
+Angle light: 175.253647
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073532
+right side sensor[1] 0.081137
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -618,16 +724,52 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.164017
-Angle light: 81.817680
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.608017, 0.277228
+Obstacle [0], coords: 0.745839, 0.503188
+Robot coords: 0.608017, 0.277228
+Obstacle [1], coords: 0.717410, 0.123564
+Angle robot: 173.716797
+Angle light: -165.905655
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.067339
+right side sensor[7] 0.074997
+left side sensor[8] 0.095127
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.092792
+Average left side 0.099391
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.603229, 0.283637
+Obstacle [6], coords: 0.927482, 0.244437
+Robot coords: 0.603229, 0.283637
+Obstacle [7], coords: 0.477966, 0.067246
+Robot coords: 0.603229, 0.283637
+Obstacle [8], coords: 0.574063, 0.322679
+Angle robot: -173.716797
+Angle light: 175.234772
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073533
+right side sensor[1] 0.081138
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -644,11 +786,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.178429
-Angle light: 81.834496
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.598442, 0.277228
+Obstacle [0], coords: 0.736261, 0.503184
+Robot coords: 0.598442, 0.277228
+Obstacle [1], coords: 0.707832, 0.123567
+Angle robot: 173.716797
+Angle light: -165.924286
 
 
  **************** Student State Machine *********************
@@ -658,919 +804,9 @@ right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
 right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.088962
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 10, 
-Average right side 0.100000
-Average left side 0.098620
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.194397
-Angle light: 81.853195
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.077666
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 10, 
-Average right side 0.100000
-Average left side 0.097208
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.212036
-Angle light: 81.873947
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.081112
-left side sensor[11] 0.093296
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 11, 10, 
-Average right side 0.100000
-Average left side 0.096801
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.231201
-Angle light: 81.896637
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.085192
-left side sensor[11] 0.076765
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 11, 10, 
-Average right side 0.100000
-Average left side 0.095245
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.251778
-Angle light: 81.921196
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.089963
-left side sensor[11] 0.065115
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 11, 10, 
-Average right side 0.100000
-Average left side 0.094385
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.273407
-Angle light: 81.947311
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.095470
-left side sensor[11] 0.068073
-left side sensor[12] 0.084562
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 10, 
-Average right side 0.100000
-Average left side 0.093513
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.295647
-Angle light: 81.974564
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.071386
-left side sensor[12] 0.059479
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.091358
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.317802
-Angle light: 82.002281
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.075019
-left side sensor[12] 0.061936
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.092119
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.339088
-Angle light: 82.029694
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.078904
-left side sensor[12] 0.064582
-left side sensor[13] 0.059598
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.087886
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.358681
-Angle light: 82.055962
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.082937
-left side sensor[12] 0.067364
-left side sensor[13] 0.061808
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.089014
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.375671
-Angle light: 82.080162
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.087001
-left side sensor[12] 0.070218
-left side sensor[13] 0.064125
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.090168
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.389412
-Angle light: 82.101608
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.090959
-left side sensor[12] 0.073072
-left side sensor[13] 0.066504
-left side sensor[14] 0.067040
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.087197
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.399323
-Angle light: 82.119675
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.094692
-left side sensor[12] 0.075860
-left side sensor[13] 0.068902
-left side sensor[14] 0.069328
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.088598
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.405174
-Angle light: 82.134079
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.098089
-left side sensor[12] 0.078520
-left side sensor[13] 0.071276
-left side sensor[14] 0.071679
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 11, 
-Average right side 0.100000
-Average left side 0.089946
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.406830
-Angle light: 82.144630
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.081005
-left side sensor[13] 0.073592
-left side sensor[14] 0.074064
-left side sensor[15] 0.082688
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.088919
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.404465
-Angle light: 82.151451
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.083277
-left side sensor[13] 0.075820
-left side sensor[14] 0.076457
-left side sensor[15] 0.085548
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.090138
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.398247
-Angle light: 82.154640
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.085319
-left side sensor[13] 0.077938
-left side sensor[14] 0.078835
-left side sensor[15] 0.088518
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.091326
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.388542
-Angle light: 82.154526
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.087113
-left side sensor[13] 0.079930
-left side sensor[14] 0.081183
-left side sensor[15] 0.091582
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.092476
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.375595
-Angle light: 82.151283
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.088663
-left side sensor[13] 0.081787
-left side sensor[14] 0.083484
-left side sensor[15] 0.094720
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.093582
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.359901
-Angle light: 82.145370
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.089965
-left side sensor[13] 0.083500
-left side sensor[14] 0.085729
-left side sensor[15] 0.097930
-
-Final List: 15, 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.094641
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.341644
-Angle light: 82.136917
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.091032
-left side sensor[13] 0.085066
-left side sensor[14] 0.087909
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.095501
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.321243
-Angle light: 82.126312
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.091871
-left side sensor[13] 0.086484
-left side sensor[14] 0.090017
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.096047
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.298943
-Angle light: 82.113739
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.092495
-left side sensor[13] 0.087754
-left side sensor[14] 0.092046
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.096537
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.275070
-Angle light: 82.099503
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.092912
-left side sensor[13] 0.088876
-left side sensor[14] 0.093994
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.096973
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.249756
-Angle light: 82.083687
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.093139
-left side sensor[13] 0.089851
-left side sensor[14] 0.095848
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.097355
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.223480
-Angle light: 82.066734
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.093170
-left side sensor[13] 0.090678
-left side sensor[14] 0.097622
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.097684
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.195869
-Angle light: 82.048233
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.093050
-left side sensor[13] 0.091356
-left side sensor[14] 0.099266
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 12, 
-Average right side 0.100000
-Average left side 0.097959
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.168419
-Angle light: 82.029663
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.092710
-left side sensor[13] 0.091896
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.098076
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.138329
-Angle light: 82.008133
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.092316
-left side sensor[13] 0.092250
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.098071
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.112747
-Angle light: 81.990883
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.091535
-left side sensor[13] 0.092575
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.098014
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.074829
-Angle light: 81.960709
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.091107
-left side sensor[13] 0.092360
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.097933
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.067421
-Angle light: 81.961273
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.089510
-left side sensor[13] 0.093299
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.097851
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.980377
-Angle light: 81.880096
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.090500
-left side sensor[13] 0.090619
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 12, 
-Average right side 0.100000
-Average left side 0.097640
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.106369
-Angle light: 82.016136
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.085927
-left side sensor[12] 0.089917
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.096980
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.654053
-Angle light: 81.560005
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.091434
-
-Final List: 15, 
-Average right side 0.100000
-Average left side 0.098929
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.797180
-Angle light: 82.731339
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.085531
-right side sensor[7] 0.094738
-left side sensor[8] 0.100000
+right side sensor[6] 0.067339
+right side sensor[7] 0.074997
+left side sensor[8] 0.095127
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -1579,17 +815,23 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 7, 6, 
-Average right side 0.097534
-Average left side 0.100000
+Final List: 
+Average right side 0.092792
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.913643
-Angle light: 79.816154
+Robot coords: 0.593654, 0.283637
+Obstacle [6], coords: 0.917906, 0.244437
+Robot coords: 0.593654, 0.283637
+Obstacle [7], coords: 0.468394, 0.067250
+Robot coords: 0.593654, 0.283637
+Obstacle [8], coords: 0.564492, 0.322673
+Angle robot: -173.716797
+Angle light: 175.215942
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073533
+right side sensor[1] 0.081139
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -1606,11 +848,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.354225
-Angle light: 83.289490
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.588866, 0.277228
+Obstacle [0], coords: 0.726685, 0.503184
+Robot coords: 0.588866, 0.277228
+Obstacle [1], coords: 0.698252, 0.123572
+Angle robot: 173.716797
+Angle light: -165.942856
 
 
  **************** Student State Machine *********************
@@ -1619,10 +865,10 @@ right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
-right side sensor[5] 0.088411
-right side sensor[6] 0.097907
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[5] 0.067055
+right side sensor[6] 0.067340
+right side sensor[7] 0.074998
+left side sensor[8] 0.095128
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -1631,225 +877,25 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 6, 5, 
-Average right side 0.098290
-Average left side 0.100000
+Final List: 
+Average right side 0.088674
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.600136
-Angle light: 79.508408
+Robot coords: 0.584078, 0.283637
+Obstacle [5], coords: 0.491728, 0.599879
+Robot coords: 0.584078, 0.283637
+Obstacle [6], coords: 0.908321, 0.244439
+Robot coords: 0.584078, 0.283637
+Obstacle [7], coords: 0.458821, 0.067255
+Robot coords: 0.584078, 0.283637
+Obstacle [8], coords: 0.554921, 0.322667
+Angle robot: -173.716797
+Angle light: 175.197144
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.088854
-left side sensor[14] 0.092624
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 
-Average right side 0.100000
-Average left side 0.097685
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.294228
-Angle light: 82.218971
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.081620
-left side sensor[10] 0.086909
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 10, 9, 
-Average right side 0.100000
-Average left side 0.096066
-intensity 0 obstacles 0 dest 2
-Angle robot: -78.972435
-Angle light: 80.873260
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.094000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 0, 
-Average right side 0.099250
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -82.131462
-Angle light: 84.055794
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.081635
-left side sensor[10] 0.085832
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 10, 9, 
-Average right side 0.100000
-Average left side 0.095933
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.011131
-Angle light: 80.912468
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.096127
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 0, 
-Average right side 0.099516
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -82.079613
-Angle light: 84.005661
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.082454
-left side sensor[10] 0.091516
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 10, 9, 
-Average right side 0.100000
-Average left side 0.096746
-intensity 0 obstacles 0 dest 2
-Angle robot: -78.850311
-Angle light: 80.749771
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.089947
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 0, 
-Average right side 0.098743
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -82.262650
-Angle light: 84.182320
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.084656
-left side sensor[12] 0.094829
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.097436
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.452690
-Angle light: 81.362022
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073534
+right side sensor[1] 0.081139
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -1866,11 +912,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.199982
-Angle light: 83.143097
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.579290, 0.277228
+Obstacle [0], coords: 0.717106, 0.503178
+Robot coords: 0.579290, 0.277228
+Obstacle [1], coords: 0.688674, 0.123577
+Angle robot: 173.716797
+Angle light: -165.961380
 
 
  **************** Student State Machine *********************
@@ -1879,10 +929,10 @@ right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
-right side sensor[5] 0.088990
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[5] 0.067056
+right side sensor[6] 0.067340
+right side sensor[7] 0.074998
+left side sensor[8] 0.095129
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -1891,69 +941,25 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 5, 
-Average right side 0.098624
-Average left side 0.100000
+Final List: 
+Average right side 0.088674
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.503433
-Angle light: 79.420235
+Robot coords: 0.574503, 0.283637
+Obstacle [5], coords: 0.482155, 0.599872
+Robot coords: 0.574503, 0.283637
+Obstacle [6], coords: 0.898740, 0.244439
+Robot coords: 0.574503, 0.283637
+Obstacle [7], coords: 0.449248, 0.067260
+Robot coords: 0.574503, 0.283637
+Obstacle [8], coords: 0.545349, 0.322661
+Angle robot: -173.716797
+Angle light: 175.178436
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.087701
-left side sensor[14] 0.099061
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 
-Average right side 0.100000
-Average left side 0.098345
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.057976
-Angle light: 81.984764
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.082145
-left side sensor[12] 0.091315
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.096682
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.474167
-Angle light: 81.391068
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073534
+right side sensor[1] 0.081139
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -1970,11 +976,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.025238
-Angle light: 82.976494
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.569715, 0.277228
+Obstacle [0], coords: 0.707528, 0.503174
+Robot coords: 0.569715, 0.277228
+Obstacle [1], coords: 0.679096, 0.123580
+Angle robot: 173.716797
+Angle light: -165.979843
 
 
  **************** Student State Machine *********************
@@ -1982,11 +992,11 @@ right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.087309
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[4] 0.073985
+right side sensor[5] 0.067056
+right side sensor[6] 0.067340
+right side sensor[7] 0.074999
+left side sensor[8] 0.095130
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -1995,69 +1005,27 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 5, 
-Average right side 0.098414
-Average left side 0.100000
+Final List: 
+Average right side 0.085423
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.461288
-Angle light: 79.385551
+Robot coords: 0.564927, 0.283637
+Obstacle [4], coords: 0.364048, 0.118332
+Robot coords: 0.564927, 0.283637
+Obstacle [5], coords: 0.472580, 0.599869
+Robot coords: 0.564927, 0.283637
+Obstacle [6], coords: 0.889162, 0.244440
+Robot coords: 0.564927, 0.283637
+Obstacle [7], coords: 0.439675, 0.067264
+Robot coords: 0.564927, 0.283637
+Obstacle [8], coords: 0.535778, 0.322656
+Angle robot: -173.716797
+Angle light: 175.159790
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.085095
-left side sensor[14] 0.096356
-left side sensor[15] 0.100000
-
-Final List: 14, 13, 
-Average right side 0.100000
-Average left side 0.097681
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.051186
-Angle light: 81.986015
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.081388
-left side sensor[12] 0.095580
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 11, 
-Average right side 0.100000
-Average left side 0.097121
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.327621
-Angle light: 81.247108
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073535
+right side sensor[1] 0.081140
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2074,11 +1042,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.270767
-Angle light: 83.227966
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.560139, 0.277228
+Obstacle [0], coords: 0.697950, 0.503170
+Robot coords: 0.560139, 0.277228
+Obstacle [1], coords: 0.669516, 0.123585
+Angle robot: 173.716797
+Angle light: -165.998215
 
 
  **************** Student State Machine *********************
@@ -2086,11 +1058,11 @@ right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.087498
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[4] 0.073986
+right side sensor[5] 0.067056
+right side sensor[6] 0.067341
+right side sensor[7] 0.075000
+left side sensor[8] 0.095130
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2099,121 +1071,27 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 5, 
-Average right side 0.098437
-Average left side 0.100000
+Final List: 
+Average right side 0.085423
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.384308
-Angle light: 79.315063
+Robot coords: 0.555351, 0.283637
+Obstacle [4], coords: 0.354477, 0.118336
+Robot coords: 0.555351, 0.283637
+Obstacle [5], coords: 0.463006, 0.599865
+Robot coords: 0.555351, 0.283637
+Obstacle [6], coords: 0.879582, 0.244440
+Robot coords: 0.555351, 0.283637
+Obstacle [7], coords: 0.430102, 0.067270
+Robot coords: 0.555351, 0.283637
+Obstacle [8], coords: 0.526206, 0.322651
+Angle robot: -173.716797
+Angle light: 175.141220
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.086742
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 
-Average right side 0.100000
-Average left side 0.098343
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.858269
-Angle light: 81.793129
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.087738
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 
-Average right side 0.100000
-Average left side 0.098467
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.764397
-Angle light: 81.699966
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.093755
-left side sensor[15] 0.100000
-
-Final List: 14, 
-Average right side 0.100000
-Average left side 0.099219
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.948372
-Angle light: 81.892250
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.086645
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 12, 
-Average right side 0.100000
-Average left side 0.098331
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.321068
-Angle light: 81.247574
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073535
+right side sensor[1] 0.081141
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2230,11 +1108,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094334
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.043320
-Angle light: 83.011536
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.550564, 0.277228
+Obstacle [0], coords: 0.688373, 0.503168
+Robot coords: 0.550564, 0.277228
+Obstacle [1], coords: 0.659938, 0.123590
+Angle robot: 173.716797
+Angle light: -166.016510
 
 
  **************** Student State Machine *********************
@@ -2242,11 +1124,11 @@ right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.092526
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[4] 0.073986
+right side sensor[5] 0.067057
+right side sensor[6] 0.067341
+right side sensor[7] 0.075000
+left side sensor[8] 0.095131
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2255,43 +1137,27 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 5, 
-Average right side 0.099066
-Average left side 0.100000
+Final List: 
+Average right side 0.085423
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.247719
-Angle light: 79.189667
+Robot coords: 0.545776, 0.283637
+Obstacle [4], coords: 0.344905, 0.118339
+Robot coords: 0.545776, 0.283637
+Obstacle [5], coords: 0.453432, 0.599858
+Robot coords: 0.545776, 0.283637
+Obstacle [6], coords: 0.870002, 0.244441
+Robot coords: 0.545776, 0.283637
+Obstacle [7], coords: 0.420529, 0.067274
+Robot coords: 0.545776, 0.283637
+Obstacle [8], coords: 0.516635, 0.322645
+Angle robot: -173.716797
+Angle light: 175.122772
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.092055
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 
-Average right side 0.100000
-Average left side 0.099007
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.559517
-Angle light: 81.493622
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073535
+right side sensor[1] 0.081141
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2308,11 +1174,15 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -80.357620
-Angle light: 82.317757
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.540988, 0.277228
+Obstacle [0], coords: 0.678795, 0.503164
+Robot coords: 0.540988, 0.277228
+Obstacle [1], coords: 0.650359, 0.123594
+Angle robot: 173.716797
+Angle light: -166.034683
 
 
  **************** Student State Machine *********************
@@ -2320,11 +1190,11 @@ right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.097092
+right side sensor[4] 0.073987
+right side sensor[5] 0.067057
+right side sensor[6] 0.067342
+right side sensor[7] 0.075001
+left side sensor[8] 0.095132
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2333,43 +1203,27 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 8, 
-Average right side 0.100000
-Average left side 0.099637
+Final List: 
+Average right side 0.085423
+Average left side 0.099391
 intensity 0 obstacles 0 dest 2
-Angle robot: -78.082779
-Angle light: 79.997780
+Robot coords: 0.536200, 0.283637
+Obstacle [4], coords: 0.335334, 0.118343
+Robot coords: 0.536200, 0.283637
+Obstacle [5], coords: 0.443857, 0.599856
+Robot coords: 0.536200, 0.283637
+Obstacle [6], coords: 0.860421, 0.244441
+Robot coords: 0.536200, 0.283637
+Obstacle [7], coords: 0.410956, 0.067279
+Robot coords: 0.536200, 0.283637
+Obstacle [8], coords: 0.507063, 0.322640
+Angle robot: -173.716797
+Angle light: 175.104431
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.098476
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.100000
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 1, 
-Average right side 0.099809
-Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -82.033394
-Angle light: 83.982101
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073536
+right side sensor[1] 0.081142
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2386,16 +1240,58 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.041260
-Angle light: 80.960991
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.531412, 0.277228
+Obstacle [0], coords: 0.669215, 0.503157
+Robot coords: 0.531412, 0.277228
+Obstacle [1], coords: 0.640780, 0.123598
+Angle robot: 173.716797
+Angle light: -166.052765
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.092624
+right side sensor[4] 0.073987
+right side sensor[5] 0.067058
+right side sensor[6] 0.067342
+right side sensor[7] 0.075001
+left side sensor[8] 0.095132
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.084502
+Average left side 0.099392
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.526625, 0.283637
+Obstacle [3], coords: 0.592122, 0.249723
+Robot coords: 0.526625, 0.283637
+Obstacle [4], coords: 0.325762, 0.118346
+Robot coords: 0.526625, 0.283637
+Obstacle [5], coords: 0.434283, 0.599851
+Robot coords: 0.526625, 0.283637
+Obstacle [6], coords: 0.850841, 0.244442
+Robot coords: 0.526625, 0.283637
+Obstacle [7], coords: 0.401383, 0.067283
+Robot coords: 0.526625, 0.283637
+Obstacle [8], coords: 0.497492, 0.322634
+Angle robot: -173.716797
+Angle light: 175.086212
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073537
+right side sensor[1] 0.081142
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2412,23 +1308,27 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.609192
-Angle light: 83.572067
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.521837, 0.277228
+Obstacle [0], coords: 0.659636, 0.503151
+Robot coords: 0.521837, 0.277228
+Obstacle [1], coords: 0.631202, 0.123602
+Angle robot: 173.716797
+Angle light: -166.070709
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.097955
-left side sensor[8] 0.100000
+right side sensor[3] 0.092625
+right side sensor[4] 0.073988
+right side sensor[5] 0.067059
+right side sensor[6] 0.067343
+right side sensor[7] 0.075002
+left side sensor[8] 0.095133
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2437,17 +1337,29 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 7, 
-Average right side 0.099744
-Average left side 0.100000
+Final List: 
+Average right side 0.084502
+Average left side 0.099392
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.819115
-Angle light: 79.740181
+Robot coords: 0.517049, 0.283637
+Obstacle [3], coords: 0.582539, 0.249726
+Robot coords: 0.517049, 0.283637
+Obstacle [4], coords: 0.316190, 0.118349
+Robot coords: 0.517049, 0.283637
+Obstacle [5], coords: 0.424709, 0.599844
+Robot coords: 0.517049, 0.283637
+Obstacle [6], coords: 0.841258, 0.244443
+Robot coords: 0.517049, 0.283637
+Obstacle [7], coords: 0.391811, 0.067288
+Robot coords: 0.517049, 0.283637
+Obstacle [8], coords: 0.487920, 0.322629
+Angle robot: -173.716797
+Angle light: 175.068115
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073537
+right side sensor[1] 0.081143
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2464,23 +1376,27 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.534149
-Angle light: 83.498062
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.512261, 0.277228
+Obstacle [0], coords: 0.650059, 0.503149
+Robot coords: 0.512261, 0.277228
+Obstacle [1], coords: 0.621623, 0.123607
+Angle robot: 173.716797
+Angle light: -166.088516
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.093219
-left side sensor[8] 0.100000
+right side sensor[3] 0.092626
+right side sensor[4] 0.073988
+right side sensor[5] 0.067059
+right side sensor[6] 0.067343
+right side sensor[7] 0.075002
+left side sensor[8] 0.095134
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2489,17 +1405,29 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 7, 
-Average right side 0.099152
-Average left side 0.100000
+Final List: 
+Average right side 0.084502
+Average left side 0.099392
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.660965
-Angle light: 79.586998
+Robot coords: 0.507473, 0.283637
+Obstacle [3], coords: 0.572959, 0.249729
+Robot coords: 0.507473, 0.283637
+Obstacle [4], coords: 0.306619, 0.118353
+Robot coords: 0.507473, 0.283637
+Obstacle [5], coords: 0.415134, 0.599842
+Robot coords: 0.507473, 0.283637
+Obstacle [6], coords: 0.831680, 0.244443
+Robot coords: 0.507473, 0.283637
+Obstacle [7], coords: 0.382237, 0.067293
+Robot coords: 0.507473, 0.283637
+Obstacle [8], coords: 0.478349, 0.322623
+Angle robot: -173.716797
+Angle light: 175.050186
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073538
+right side sensor[1] 0.081143
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2516,23 +1444,27 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
 Average left side 0.100000
-intensity 0 obstacles 0 dest 2
-Angle robot: -81.085915
-Angle light: 83.053947
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.502685, 0.277228
+Obstacle [0], coords: 0.640481, 0.503145
+Robot coords: 0.502685, 0.277228
+Obstacle [1], coords: 0.612044, 0.123611
+Angle robot: 173.716797
+Angle light: -166.106171
 
 
  **************** Student State Machine *********************
 right side sensor[0] 0.100000
 right side sensor[1] 0.100000
 right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.091009
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
+right side sensor[3] 0.092626
+right side sensor[4] 0.073989
+right side sensor[5] 0.067060
+right side sensor[6] 0.067344
+right side sensor[7] 0.075003
+left side sensor[8] 0.095134
 left side sensor[9] 0.100000
 left side sensor[10] 0.100000
 left side sensor[11] 0.100000
@@ -2541,43 +1473,29 @@ left side sensor[13] 0.100000
 left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
-Final List: 5, 
-Average right side 0.098876
-Average left side 0.100000
+Final List: 
+Average right side 0.084503
+Average left side 0.099392
 intensity 0 obstacles 0 dest 2
-Angle robot: -77.248039
-Angle light: 79.189903
+Robot coords: 0.497898, 0.283637
+Obstacle [3], coords: 0.563377, 0.249732
+Robot coords: 0.497898, 0.283637
+Obstacle [4], coords: 0.297048, 0.118356
+Robot coords: 0.497898, 0.283637
+Obstacle [5], coords: 0.405561, 0.599835
+Robot coords: 0.497898, 0.283637
+Obstacle [6], coords: 0.822097, 0.244444
+Robot coords: 0.497898, 0.283637
+Obstacle [7], coords: 0.372665, 0.067297
+Robot coords: 0.497898, 0.283637
+Obstacle [8], coords: 0.468777, 0.322618
+Angle robot: -173.716797
+Angle light: 175.032394
 
 
  **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
-right side sensor[2] 0.100000
-right side sensor[3] 0.100000
-right side sensor[4] 0.100000
-right side sensor[5] 0.100000
-right side sensor[6] 0.100000
-right side sensor[7] 0.100000
-left side sensor[8] 0.100000
-left side sensor[9] 0.100000
-left side sensor[10] 0.100000
-left side sensor[11] 0.100000
-left side sensor[12] 0.100000
-left side sensor[13] 0.092812
-left side sensor[14] 0.100000
-left side sensor[15] 0.100000
-
-Final List: 13, 
-Average right side 0.100000
-Average left side 0.099102
-intensity 0 obstacles 0 dest 2
-Angle robot: -79.554016
-Angle light: 81.487839
-
-
- **************** Student State Machine *********************
-right side sensor[0] 0.100000
-right side sensor[1] 0.100000
+right side sensor[0] 0.073538
+right side sensor[1] 0.081144
 right side sensor[2] 0.100000
 right side sensor[3] 0.100000
 right side sensor[4] 0.100000
@@ -2594,8 +1512,2054 @@ left side sensor[14] 0.100000
 left side sensor[15] 0.100000
 
 Final List: 
-Average right side 0.100000
+Average right side 0.094335
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.493110, 0.277228
+Obstacle [0], coords: 0.630903, 0.503141
+Robot coords: 0.493110, 0.277228
+Obstacle [1], coords: 0.602466, 0.123615
+Angle robot: 173.716797
+Angle light: -166.123688
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.092627
+right side sensor[4] 0.073989
+right side sensor[5] 0.067060
+right side sensor[6] 0.067344
+right side sensor[7] 0.075003
+left side sensor[8] 0.095135
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.084503
+Average left side 0.099392
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.488322, 0.283637
+Obstacle [3], coords: 0.553795, 0.249735
+Robot coords: 0.488322, 0.283637
+Obstacle [4], coords: 0.287477, 0.118360
+Robot coords: 0.488322, 0.283637
+Obstacle [5], coords: 0.395985, 0.599835
+Robot coords: 0.488322, 0.283637
+Obstacle [6], coords: 0.812517, 0.244444
+Robot coords: 0.488322, 0.283637
+Obstacle [7], coords: 0.363092, 0.067302
+Robot coords: 0.488322, 0.283637
+Obstacle [8], coords: 0.459206, 0.322612
+Angle robot: -173.716797
+Angle light: 175.014771
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073539
+right side sensor[1] 0.081144
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.100000
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.094335
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.483534, 0.277228
+Obstacle [0], coords: 0.621325, 0.503137
+Robot coords: 0.483534, 0.277228
+Obstacle [1], coords: 0.592887, 0.123620
+Angle robot: 173.716797
+Angle light: -166.141037
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.092628
+right side sensor[4] 0.073990
+right side sensor[5] 0.067060
+right side sensor[6] 0.067345
+right side sensor[7] 0.075004
+left side sensor[8] 0.095136
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.084503
+Average left side 0.099392
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.478746, 0.283637
+Obstacle [3], coords: 0.544214, 0.249739
+Robot coords: 0.478746, 0.283637
+Obstacle [4], coords: 0.277904, 0.118362
+Robot coords: 0.478746, 0.283637
+Obstacle [5], coords: 0.386411, 0.599830
+Robot coords: 0.478746, 0.283637
+Obstacle [6], coords: 0.802936, 0.244445
+Robot coords: 0.478746, 0.283637
+Obstacle [7], coords: 0.353519, 0.067307
+Robot coords: 0.478746, 0.283637
+Obstacle [8], coords: 0.449634, 0.322607
+Angle robot: -173.716797
+Angle light: 174.997330
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073539
+right side sensor[1] 0.081145
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.100000
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.094336
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.473959, 0.277228
+Obstacle [0], coords: 0.611745, 0.503131
+Robot coords: 0.473959, 0.277228
+Obstacle [1], coords: 0.583308, 0.123624
+Angle robot: 173.716797
+Angle light: -166.158218
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.092628
+right side sensor[4] 0.073990
+right side sensor[5] 0.067061
+right side sensor[6] 0.067345
+right side sensor[7] 0.075004
+left side sensor[8] 0.095136
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.084504
+Average left side 0.099392
+intensity 0 obstacles 0 dest 2
+Robot coords: 0.469171, 0.283637
+Obstacle [3], coords: 0.534632, 0.249742
+Robot coords: 0.469171, 0.283637
+Obstacle [4], coords: 0.268334, 0.118367
+Robot coords: 0.469171, 0.283637
+Obstacle [5], coords: 0.376837, 0.599823
+Robot coords: 0.469171, 0.283637
+Obstacle [6], coords: 0.793358, 0.244445
+Robot coords: 0.469171, 0.283637
+Obstacle [7], coords: 0.343946, 0.067311
+Robot coords: 0.469171, 0.283637
+Obstacle [8], coords: 0.440063, 0.322601
+Angle robot: -173.716797
+Angle light: 174.980057
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.073540
+right side sensor[1] 0.081145
+right side sensor[2] 0.100000
+right side sensor[3] 0.100000
+right side sensor[4] 0.100000
+right side sensor[5] 0.100000
+right side sensor[6] 0.100000
+right side sensor[7] 0.100000
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.094336
+Average left side 0.100000
+intensity 0 obstacles 0 dest 3
+Robot coords: 0.464383, 0.277228
+Obstacle [0], coords: 0.602167, 0.503127
+Robot coords: 0.464383, 0.277228
+Obstacle [1], coords: 0.573729, 0.123629
+Angle robot: 173.716797
+Angle light: -166.175217
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.092629
+right side sensor[4] 0.073991
+right side sensor[5] 0.067061
+right side sensor[6] 0.067346
+right side sensor[7] 0.075005
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.084504
 Average left side 0.100000
 intensity 0 obstacles 0 dest 2
-Angle robot: -80.380844
-Angle light: 82.341400
+Robot coords: 0.459595, 0.283637
+Obstacle [3], coords: 0.525050, 0.249745
+Robot coords: 0.459595, 0.283637
+Obstacle [4], coords: 0.258762, 0.118370
+Robot coords: 0.459595, 0.283637
+Obstacle [5], coords: 0.367263, 0.599819
+Robot coords: 0.459595, 0.283637
+Obstacle [6], coords: 0.783775, 0.244446
+Robot coords: 0.459595, 0.283637
+Obstacle [7], coords: 0.334373, 0.067316
+Angle robot: -173.716797
+Angle light: 174.962967
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.083685
+right side sensor[4] 0.066846
+right side sensor[5] 0.060586
+right side sensor[6] 0.060842
+right side sensor[7] 0.067762
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.079965
+Average left side 0.100000
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.454807, 0.290046
+Obstacle [3], coords: 0.599691, 0.215026
+Robot coords: 0.454807, 0.290046
+Obstacle [4], coords: 0.198804, 0.079380
+Robot coords: 0.454807, 0.290046
+Obstacle [5], coords: 0.344323, 0.668388
+Robot coords: 0.454807, 0.290046
+Obstacle [6], coords: 0.843553, 0.243050
+Robot coords: 0.454807, 0.290046
+Obstacle [7], coords: 0.293300, 0.011043
+Angle robot: -173.716797
+Angle light: 174.950546
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.074740
+right side sensor[4] 0.059701
+right side sensor[5] 0.054110
+right side sensor[6] 0.054340
+right side sensor[7] 0.060520
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.075426
+Average left side 0.100000
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.450020, 0.296455
+Obstacle [3], coords: 0.674334, 0.180307
+Robot coords: 0.450020, 0.296455
+Obstacle [4], coords: 0.138847, 0.040389
+Robot coords: 0.450020, 0.296455
+Obstacle [5], coords: 0.321382, 0.736961
+Robot coords: 0.450020, 0.296455
+Obstacle [6], coords: 0.903324, 0.241654
+Robot coords: 0.450020, 0.296455
+Obstacle [7], coords: 0.252227, -0.045230
+Angle robot: -173.716797
+Angle light: 174.937912
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.100000
+right side sensor[3] 0.065795
+right side sensor[4] 0.052556
+right side sensor[5] 0.047634
+right side sensor[6] 0.047836
+right side sensor[7] 0.053277
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.070887
+Average left side 0.100000
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.445232, 0.302864
+Obstacle [3], coords: 0.748976, 0.145588
+Robot coords: 0.445232, 0.302864
+Obstacle [4], coords: 0.078889, 0.001399
+Robot coords: 0.445232, 0.302864
+Obstacle [5], coords: 0.298443, 0.805526
+Robot coords: 0.445232, 0.302864
+Obstacle [6], coords: 0.963096, 0.240259
+Robot coords: 0.445232, 0.302864
+Obstacle [7], coords: 0.211154, -0.101504
+Angle robot: -173.716797
+Angle light: 174.925064
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.087433
+right side sensor[3] 0.056851
+right side sensor[4] 0.045412
+right side sensor[5] 0.041159
+right side sensor[6] 0.041333
+right side sensor[7] 0.046034
+left side sensor[8] 0.100000
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.064778
+Average left side 0.100000
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.440444, 0.309274
+Obstacle [2], coords: 0.449654, 0.434606
+Robot coords: 0.440444, 0.309274
+Obstacle [3], coords: 0.823616, 0.110869
+Robot coords: 0.440444, 0.309274
+Obstacle [4], coords: 0.018932, -0.037591
+Robot coords: 0.440444, 0.309274
+Obstacle [5], coords: 0.275503, 0.874096
+Robot coords: 0.440444, 0.309274
+Obstacle [6], coords: 1.022869, 0.238863
+Robot coords: 0.440444, 0.309274
+Obstacle [7], coords: 0.170082, -0.157777
+Angle robot: -173.716797
+Angle light: 174.912003
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.073677
+right side sensor[3] 0.047906
+right side sensor[4] 0.038267
+right side sensor[5] 0.034683
+right side sensor[6] 0.034830
+right side sensor[7] 0.038791
+left side sensor[8] 0.049203
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.058519
+Average left side 0.093650
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.435656, 0.315683
+Obstacle [2], coords: 0.454947, 0.578207
+Robot coords: 0.435656, 0.315683
+Obstacle [3], coords: 0.898258, 0.076150
+Robot coords: 0.435656, 0.315683
+Obstacle [4], coords: -0.041026, -0.076582
+Robot coords: 0.435656, 0.315683
+Obstacle [5], coords: 0.252563, 0.942663
+Robot coords: 0.435656, 0.315683
+Obstacle [6], coords: 1.082645, 0.237467
+Robot coords: 0.435656, 0.315683
+Obstacle [7], coords: 0.129008, -0.214051
+Robot coords: 0.435656, 0.315683
+Obstacle [8], coords: 0.131645, 0.722631
+Angle robot: -173.716797
+Angle light: 174.898727
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.059921
+right side sensor[3] 0.038962
+right side sensor[4] 0.031122
+right side sensor[5] 0.028207
+right side sensor[6] 0.028327
+right side sensor[7] 0.031549
+left side sensor[8] 0.040017
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.052261
+Average left side 0.092502
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.430868, 0.322092
+Obstacle [2], coords: 0.460240, 0.721808
+Robot coords: 0.430868, 0.322092
+Obstacle [3], coords: 0.972899, 0.041432
+Robot coords: 0.430868, 0.322092
+Obstacle [4], coords: -0.100983, -0.115572
+Robot coords: 0.430868, 0.322092
+Obstacle [5], coords: 0.229623, 1.011236
+Robot coords: 0.430868, 0.322092
+Obstacle [6], coords: 1.142417, 0.236071
+Robot coords: 0.430868, 0.322092
+Obstacle [7], coords: 0.087936, -0.270323
+Robot coords: 0.430868, 0.322092
+Obstacle [8], coords: 0.071876, 0.802639
+Angle robot: -173.716797
+Angle light: 174.885239
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.100000
+right side sensor[2] 0.046164
+right side sensor[3] 0.030017
+right side sensor[4] 0.023977
+right side sensor[5] 0.021732
+right side sensor[6] 0.021824
+right side sensor[7] 0.024306
+left side sensor[8] 0.030830
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.046003
+Average left side 0.091354
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.426081, 0.328501
+Obstacle [2], coords: 0.465534, 0.865408
+Robot coords: 0.426081, 0.328501
+Obstacle [3], coords: 1.047541, 0.006713
+Robot coords: 0.426081, 0.328501
+Obstacle [4], coords: -0.160941, -0.154563
+Robot coords: 0.426081, 0.328501
+Obstacle [5], coords: 0.206683, 1.079803
+Robot coords: 0.426081, 0.328501
+Obstacle [6], coords: 1.202190, 0.234675
+Robot coords: 0.426081, 0.328501
+Obstacle [7], coords: 0.046862, -0.326597
+Robot coords: 0.426081, 0.328501
+Obstacle [8], coords: 0.012107, 0.882646
+Angle robot: -173.716797
+Angle light: 174.871521
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.088989
+right side sensor[2] 0.032408
+right side sensor[3] 0.021073
+right side sensor[4] 0.016833
+right side sensor[5] 0.015256
+right side sensor[6] 0.015321
+right side sensor[7] 0.017063
+left side sensor[8] 0.021643
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.038368
+Average left side 0.090205
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.421293, 0.334910
+Obstacle [1], coords: 0.317163, 0.299117
+Robot coords: 0.421293, 0.334910
+Obstacle [2], coords: 0.470827, 1.009010
+Robot coords: 0.421293, 0.334910
+Obstacle [3], coords: 1.122182, -0.028006
+Robot coords: 0.421293, 0.334910
+Obstacle [4], coords: -0.220898, -0.193553
+Robot coords: 0.421293, 0.334910
+Obstacle [5], coords: 0.183743, 1.148373
+Robot coords: 0.421293, 0.334910
+Obstacle [6], coords: 1.261966, 0.233279
+Robot coords: 0.421293, 0.334910
+Obstacle [7], coords: 0.005790, -0.382870
+Robot coords: 0.421293, 0.334910
+Obstacle [8], coords: -0.047662, 0.962653
+Angle robot: -173.716797
+Angle light: 174.857605
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.051216
+right side sensor[2] 0.018652
+right side sensor[3] 0.012128
+right side sensor[4] 0.009688
+right side sensor[5] 0.008781
+right side sensor[6] 0.008818
+right side sensor[7] 0.009820
+left side sensor[8] 0.012456
+left side sensor[9] 0.100000
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.027388
+Average left side 0.089057
+intensity 0 obstacles 1 dest 2
+Robot coords: 0.416505, 0.341319
+Obstacle [1], coords: -0.044840, 0.182740
+Robot coords: 0.416505, 0.341319
+Obstacle [2], coords: 0.476120, 1.152611
+Robot coords: 0.416505, 0.341319
+Obstacle [3], coords: 1.196824, -0.062725
+Robot coords: 0.416505, 0.341319
+Obstacle [4], coords: -0.280855, -0.232544
+Robot coords: 0.416505, 0.341319
+Obstacle [5], coords: 0.160803, 1.216941
+Robot coords: 0.416505, 0.341319
+Obstacle [6], coords: 1.321738, 0.231884
+Robot coords: 0.416505, 0.341319
+Obstacle [7], coords: -0.035283, -0.439143
+Robot coords: 0.416505, 0.341319
+Obstacle [8], coords: -0.107432, 1.042660
+Angle robot: -173.716797
+Angle light: 174.843475
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
+
+
+ **************** Student State Machine *********************
+right side sensor[0] 0.100000
+right side sensor[1] 0.013444
+right side sensor[2] 0.004896
+right side sensor[3] 0.003183
+right side sensor[4] 0.002543
+right side sensor[5] 0.002305
+right side sensor[6] 0.002315
+right side sensor[7] 0.002578
+left side sensor[8] 0.003270
+left side sensor[9] 0.005160
+left side sensor[10] 0.100000
+left side sensor[11] 0.100000
+left side sensor[12] 0.100000
+left side sensor[13] 0.100000
+left side sensor[14] 0.100000
+left side sensor[15] 0.100000
+
+Final List: 
+Average right side 0.016408
+Average left side 0.076054
+intensity 0 obstacles 3 dest 2
+Robot coords: 0.411717, 0.347728
+Obstacle [1], coords: -0.406839, 0.066364
+Robot coords: 0.411717, 0.347728
+Obstacle [2], coords: 0.481414, 1.296211
+Robot coords: 0.411717, 0.347728
+Obstacle [3], coords: 1.271465, -0.097444
+Robot coords: 0.411717, 0.347728
+Obstacle [4], coords: -0.340813, -0.271534
+Robot coords: 0.411717, 0.347728
+Obstacle [5], coords: 0.137863, 1.285511
+Robot coords: 0.411717, 0.347728
+Obstacle [6], coords: 1.381509, 0.230488
+Robot coords: 0.411717, 0.347728
+Obstacle [7], coords: -0.076356, -0.495416
+Robot coords: 0.411717, 0.347728
+Obstacle [8], coords: -0.167201, 1.122667
+Robot coords: 0.411717, 0.347728
+Obstacle [9], coords: 1.333571, 0.570568
+Angle robot: -173.716797
+Angle light: 174.829117
