@@ -1,254 +1,320 @@
 /********************************************************
  *                                                      *
  *                                                      *
- *      state_machine_student.h          				*
+ *      state_machine_student.h          		*
  *                                                      *
- *		Student:										*
- *		FI-UNAM											*
- *		2-15-2024                               		*
+ *		Student:				*
+ *		FI-UNAM					*
+ *		2-15-2024                               *
  *                                                      *
  ********************************************************/
 
 
-/*Notes:
->> Robot has two sides left & right
->> This is the behaviour 5
->> How does it work?
-	Save all changes in state_machine_student.h
-	With "./robotics_students_make" compile program in /user/robotics_students
-	With command "make" compile program in "/user/robotics_students/motion_planner"
-	Go to "user/robotics_students/gui" and execute "python2.7 GUI_robotics_students.py 5"
-	If everything is correct, the programed behaviour will work effectively
-*/
+// Student State Machine 
+AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float Mag_Advance, float max_angle, int num_sensors){
 
-/*----ADDED----//
-	Observations -> ??
-	intensity -> 0: far frome light, 1: close to light
-	obs -> 0: There's no obstacle, 1: Obstacle in the right, 2: Obstacle in the left, 3: Obstacle in front
-	dest ->
-	Mag_Advance -> ???
-	max_angle -> ???
+ AdvanceAngle gen_vector;
+ int obs;
+ int j;
+ float left_side=0;
+ float right_side=0;
+ int value = 0;
+ static int step=0;
 
-	Movement direction is given by
-	gen_vector = generate_output(MOVEMENT,Mag_Advance,max_angle);
-	MOVEMENT: FORWARD/RIGHTADVANCETWICE/LEFTADVANCETWICE/RIGHTADVANCE/LEFTADVANCE
-//----END OF ADDED----*/
-#include <list>
-#include <iostream>
-using namespace std;
+ step++;
+ printf("\n\n **************** Student Reactive Behavior %d *********************\n",step);
 
-
-float slopeEquation(float m, float b, float x)
-{
-	float y = m * x + b;
-	return y;
-}
-
-//Student State Machine 1 (python2.7 GUI_robotics_students.py 5)
-float m, angle, slope, intercept;
-int obstacleEncountered = 0;
-coord obs_coord = {0.0f, 0.0f, 0.0f}; //Default conditions
-coord initial_position = {0.0f, 0.0f, 0.0f}; 
-AdvanceAngle reactive_students(Raw observations, int dest, int intensity, float Mag_Advance, float max_angle, int num_sensors, float angle_light, coord coord_robot, coord coord_dest)
-{
-	AdvanceAngle gen_vector;
- 	int obs;
- 	int j;
-	float left_side = 0;
- 	float right_side = 0;
- 	int value = 0;
- 	static int step = 0;
-
-	//----ADDED CODE----//
-	if(step == 0)
-	{
-		initial_position = coord_robot;
-		slope = (coord_dest.yc - initial_position.yc)/(coord_dest.xc - initial_position.xc); 	//Slope
-		intercept = initial_position.yc - slope * initial_position.xc; 							//Intercept
-	}
-	//----END OF ADDED CODE----//
-
- 	printf("\n\n **************** Student Reactive Behavior %d *********************\n", step);
-
- 	//Left & right sensing
- 	for(j = 0; j < num_sensors/2;j++)
- 	{
-        right_side = observations.sensors[j] + right_side;
-        printf("Right side sensor[%d] %f\n",j,observations.sensors[j]);
- 	}
- 	for(j = num_sensors/2;j < num_sensors;j++)
- 	{
-    	left_side = observations.sensors[j] + left_side;
-        printf("Left side sensor[%d] %f\n",j,observations.sensors[j]);
- 	}
-
- 	right_side = right_side/(num_sensors/2);
- 	left_side = left_side/(num_sensors/2);
-	printf("Average right side %f\n",right_side);
- 	printf("Average left side %f\n",left_side);
-
- 	if(left_side < THRS) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
-
- 	if(right_side < THRS) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
-
- 	obs = value;
- 	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
-
-	//----ADDED CODE----//
-	/*Notes:
-		>> I need coordinates
-		>> If coords hasn't been declared, robot follows angle
-		>> When obstacle found, register coordinates and turn left to round object
-		>> When coordinates are equal to previously saved, follow angle light direction again
-		>> Repeat past step if necessary
-	*/
-
-	if(obs == 0) //No obstacle
-	{
-		if(obstacleEncountered != 0)
-		{
-			if(right_side < 0.05)
-			{
-				gen_vector = generate_output(FORWARD, Mag_Advance, max_angle);
-			}
-			else if(right_side >= 0.05)
-			{
-				gen_vector = MoveRobot(Mag_Advance, -20);
-			}
-			if(std::trunc(coord_robot.yc)/100 == std::trunc(slopeEquation(slope, intercept, coord_robot.xc)))
-			{
-				gen_vector = MoveRobot(Mag_Advance, angle_light);
-				obstacleEncountered = 0;
-			}
-		}
-		else 
-		{
-			gen_vector = generate_output(FORWARD, Mag_Advance, max_angle);
-		}
-	}
-	else if(obs == 1) //Obstacle in the right 
-	{
-		gen_vector = generate_output(LEFTADVANCE, Mag_Advance, max_angle);
-	}
-	else if(obs == 2) //Obstacle in the left
-	{
-		gen_vector = generate_output(RIGHTADVANCE, Mag_Advance, max_angle);
-	}
-	else if(obs == 3) //Obstacle in front
-	{
-		obstacleEncountered = 1;
-		gen_vector = generate_output(LEFTADVANCETWICE, Mag_Advance, max_angle);
-	}
-
-	if(step == 0)
-		gen_vector = MoveRobot(Mag_Advance, angle_light);
-
-	//Test line
-	//----END OF ADDED CODE----//
-
-	step++;
-	return gen_vector;
-}
-
-//Functions: magnitude, dif_vectors, get_angle, get_intensity_angle, 
-
-
-//Student State Machine 2 (python2.7 GUI_robotics_students.py 6)
-coord zeroVector = {0.0f, 0.0f, 0.0f};
-coord Fu = {0.00001, 0.00001f, 0.0f};
-coord previousPosition = {0.001f, 0.001f, 0.0f};
-coord Frep = {0.0f, 0.0f, 0.0f};
-AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, coord coord_robot, coord coord_dest, float angle_light)
-{
- 	AdvanceAngle gen_vector;
- 	int obs;
- 	int j;
-	float left_side=0;
- 	float right_side=0;
- 	int value = 0;
-
-	//Added variables
-	float E1 = 0.3f;
-	float delta = 1.0f;
-	float Etha = 0.00015f; //0.00015
-	float d0 = 5.0f;
-	float Uatr;
-	coord Fatr;
-	coord Frep;
-	coord nextPos;
-	float angleDirection;
-	coord obstacleCoord = {0.5f, 0.5f, 0.0f};
-	std::list<int> sensorDetection;
-	//End of added variables
-
- 	printf("\n\n **************** Student State Machine *********************\n");
-
- 	for(j = 0; j < num_sensors/2; j++) //Redo this fragment
- 	{
+ for(j=0;j<num_sensors/2;j++){
         right_side = observations.sensors[j] + right_side;
         printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
- 	}
+ }
 
- 	for(j = num_sensors/2; j < num_sensors; j++)
- 	{
+ for(j=num_sensors/2;j<num_sensors;j++){
         left_side = observations.sensors[j] + left_side;
         printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
- 	}
-	
-	//LIST DISPLAY
-    cout << endl << "Final List: ";
-    for(int number : sensorDetection) 
-	{	cout << number << ", ";	}
-	printf("\n");
-	//END OF DISPLAY
+ }
 
-	right_side = right_side/(num_sensors/2);
-	left_side = left_side/(num_sensors/2);
-	printf("Average right side %f\n",right_side);
-	printf("Average left side %f\n",left_side);
+ right_side = right_side/(num_sensors/2);
+ left_side = left_side/(num_sensors/2);
+ printf("Average right side %f\n",right_side);
+ printf("Average left side %f\n",left_side);
 
- 	if( left_side < THRS) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
+ if( left_side < THRS) value = (value << 1) + 1;
+ else value = (value << 1) + 0;
 
- 	if( right_side < THRS) value = (value << 1) + 1;
- 	else value = (value << 1) + 0;
+ if( right_side < THRS) value = (value << 1) + 1;
+ else value = (value << 1) + 0;
 
- 	obs = value;
- 	printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
+ obs = value;
+ printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
 
-	//----ADDED CODE----//
-	Fatr = vecEscalarMult(E1, vecSubtraction(coord_robot, coord_dest));
+ if (intensity == 1){
+	// Constants STOP, TURN RIGHT, ETC, are defined in ../utilities/constants.h
+	// generate_output function in ../utilities/utilities.h
+	gen_vector=generate_output(STOP,Mag_Advance,max_angle);
+        printf("STOP\n");
+	printf("\n **************** Reached light source ******************************\n");
+ }
+ else if (obs == 0){
+	// There is not obstacle
+        //gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+	//printf("FORWARD\n");
 
-	//Repulsive force
-	for(j = 0; j < num_sensors; j++)
-	{
-		if(observations.sensors[j] < 0.1)
-		{
-			obstacleCoord = detectObstacle(coord_robot, j, observations.sensors[j], num_sensors);
-			Frep = vecAddition(Frep, repulsiveForce(coord_robot, obstacleCoord, Etha, d0));
-		}	
-	}
-	//Frep = zeroVector;
+	if (dest == 0){
+                // go right twice
+		gen_vector=generate_output(RIGHTADVANCETWICE,Mag_Advance,max_angle);
+                printf("TURN RIGHT TWICE\n");
+        }
+        else if (dest == 1){
+                // go left twice
+                gen_vector=generate_output(LEFTADVANCETWICE,Mag_Advance,max_angle);
+                printf("TURN LEFT TWICE\n");
+        }
+        else if (dest == 2){
+                 // go right
+                 gen_vector=generate_output(RIGHTADVANCE,Mag_Advance,max_angle);
+                 printf("TURN RIGHT\n");
+        }
+        else if (dest == 3){
+                // go left
+                gen_vector=generate_output(LEFTADVANCE,Mag_Advance,max_angle);
+                printf("TURN LEFT\n");
+        }
+ }
+ else if (obs == 1){
+        // Obtacle in the right
+        gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+	printf("TURN LEFT\n");
+ }
+ else if (obs == 2){
+        // obtacle in the left
+	gen_vector=generate_output(RIGHT,Mag_Advance,max_angle);
+	printf("TURN RIGHT\n");
+ }
+ else if (obs == 3){
+	// obstacle in the front
+        gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+	printf("TURN LEFT\n");
+ }
 
-	//Direction vector
-	Fu = vecAddition(Fatr, Frep);
 
-	//nextPos = q_(n+1)
-	nextPos = vecSubtraction(coord_robot, vecEscalarMult(delta, Fu));
+ return gen_vector;
 
-	//Vector movement applied
-	gen_vector = MoveRobot(0.008, Fu.anglec - coord_robot.anglec);
-	printf("Angle robot: %f\n", coord_robot.anglec);
-	printf("Angle light: %f\n", angle_light);
-	
-
-	//----END OF ADDED CODE----// <>
-
-	return gen_vector;
 }
 
 
 
                  
+
+
+// Student State Machine 
+AdvanceAngle state_machine_students(Raw observations, int dest, int intensity, int state, int *next_state, float Mag_Advance, float max_angle, int num_sensors, float angle_light){
+
+ AdvanceAngle gen_vector;
+ int obs;
+ int j;
+ float left_side=0;
+ float right_side=0;
+ int value = 0;
+
+ printf("\n\n **************** Student State Machine *********************\n");
+
+ for(j=0;j<num_sensors/2;j++){
+        right_side = observations.sensors[j] + right_side;
+        printf("right side sensor[%d] %f\n",j,observations.sensors[j]);
+ }
+
+ for(j=num_sensors/2;j<num_sensors;j++){
+        left_side = observations.sensors[j] + left_side;
+        printf("left side sensor[%d] %f\n",j,observations.sensors[j]);
+ }
+
+ right_side = right_side/(num_sensors/2);
+ left_side = left_side/(num_sensors/2);
+ printf("Average right side %f\n",right_side);
+ printf("Average left side %f\n",left_side);
+
+ if( left_side < THRS) value = (value << 1) + 1;
+ else value = (value << 1) + 0;
+
+ if( right_side < THRS) value = (value << 1) + 1;
+ else value = (value << 1) + 0;
+
+ obs = value;
+ printf("intensity %d obstacles %d dest %d\n",intensity,obs,dest);
+ printf("Angle light %f\n",angle_light);
+
+ switch ( state ) {
+
+        case 0:
+                if (intensity == 1){
+                        gen_vector=generate_output(STOP,Mag_Advance,max_angle);
+                        *next_state = 1;
+
+                        printf("Present State: %d STOP\n", state);
+			printf("\n **************** Reached light source ******************************\n");
+                }
+                else{
+
+			gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                        *next_state = 1;
+
+                        printf("Present State: %d FORWARD\n", state);
+                }
+
+                break;
+
+        case 1:
+                if (obs == 0){
+			// There is not obstacle
+                        gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                        *next_state = 13;
+
+                        printf("Present State: %d FORWARD\n", state);
+                }
+                else{
+                        gen_vector=generate_output(STOP,Mag_Advance,max_angle);
+                        printf("Present State: %d STOP\n", state);
+
+                        if (obs == 1){
+                                // obtacle in the  right
+                                *next_state = 2;
+                        }
+                        else if (obs == 2){
+                                // obtacle in the left
+                                *next_state = 4;
+                        }
+                        else if (obs == 3){
+				// obstacle in the front
+                                *next_state = 6;
+                        }
+                }
+
+                break;
+
+        case 2: // Backward, obstacle in the right
+                gen_vector=generate_output(BACKWARD,Mag_Advance,max_angle);
+                *next_state = 3;
+
+		printf("Present State: %d BACKWARD, obstacle right\n", state);
+                break;
+
+        case 3: // right turn
+                gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+                *next_state = 0;
+
+		printf("Present State: %d TURN LEFT\n", state);
+                break;
+
+        case 4: // Backward, obstacle in the left
+                gen_vector=generate_output(BACKWARD,Mag_Advance,max_angle);
+                *next_state = 5;
+
+		printf("Present State: %d BACKWARD, obstacle left\n", state);
+                break;
+
+        case 5: // left turn
+                gen_vector=generate_output(RIGHT,Mag_Advance,max_angle);
+                *next_state = 0;
+
+		printf("Present State: %d TURN RIGTH\n", state);
+                break;
+
+        case 6: // Backward, obstacle in front
+                gen_vector=generate_output(BACKWARD,Mag_Advance,max_angle);
+                *next_state = 7;
+
+		printf("Present State: %d BACKWARD, obstacle FRONT\n", state);
+                break;
+
+	case 7: /// Left turn
+                gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+                *next_state = 8;
+
+		printf("Present State: %d TURN 1 LEFT\n", state);
+                break;
+
+        case 8:// Left turn
+                gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+                *next_state = 9;
+
+		printf("Present State: %d TURN 2 LEFT\n", state);
+                break;
+
+        case 9: // Forward
+                gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                *next_state = 10;
+
+                printf("Present State: %d 1 FORWARD\n", state);
+                break;
+
+        case 10: // Forward
+                gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                *next_state = 11;
+
+                printf("Present State: %d 2 FORWARD\n", state);
+                break;
+
+	case 11: // Right turn
+                gen_vector=generate_output(RIGHT,Mag_Advance,max_angle);
+                *next_state = 12;
+
+                printf("Present State: %d turn 1 RIGHT\n", state);
+                break;
+
+        case 12: // Right turn
+                gen_vector=generate_output(RIGHT,Mag_Advance,max_angle);
+                *next_state = 0;
+
+                printf("Present State: %d turn 2 RIGHT\n", state);
+                break;
+
+
+        case 13: // // check destination
+		 if (dest == 0){
+                                // go right
+                                gen_vector=generate_output(RIGHT,Mag_Advance,max_angle);
+                                *next_state = 5;
+
+                                printf("Present State: %d RIGHT\n", state);
+                 }
+                 else if (dest == 1){
+                                // go left
+                                gen_vector=generate_output(LEFT,Mag_Advance,max_angle);
+                                *next_state = 3;
+
+                                printf("Present State: %d LEFT\n", state);
+                 }
+                 else if (dest == 2){
+                                // go right single
+                                gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                                *next_state = 5;
+
+                                printf("Present State: %d FORWARD\n", state);
+                 }
+                 else if (dest == 3){
+                                // go left single
+                                gen_vector=generate_output(FORWARD,Mag_Advance,max_angle);
+                                *next_state = 3;
+
+                                printf("Present State: %d FORWARD\n", state);
+                 }
+                break;
+
+	default:
+		printf("State %d not defined used ", state);
+                gen_vector=generate_output(STOP,Mag_Advance,max_angle);
+                next_state = 0;
+                break;
+
+                
+ }
+
+ return gen_vector;
+
+}
+
+
+
+                 
+

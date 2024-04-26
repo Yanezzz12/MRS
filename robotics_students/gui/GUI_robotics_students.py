@@ -1,8 +1,8 @@
-# GUI_students.py 
+# GUI_robotics_students.py 
 '''
 @author: Jesus Savage, UNAM-FI, 6-2024
 '''
-
+from MobileRobotSimulator import *
 import os
 import Tkinter as tk
 import tkFileDialog
@@ -15,7 +15,10 @@ import os
 import numpy as np
 from initial_behaviors import *
 import time
-
+#from PIL import Image
+#from PIL import ImageDraw
+ 
+ 
 
 
 #---------------------------------------------------------------------------------------
@@ -66,6 +69,7 @@ flg_unk = 0
 #previous_num = 0
 #previous_data = [0] * 2
 number_steps_total = 100
+varShowNodes   = False
 
 
 
@@ -261,6 +265,9 @@ class PLANNER(object):
                 self.noise.deselect()
                 self.add_noise.set(0)
 
+		# Plot Topological map button
+		#self.buttonPlotTopological= Button(self.rightMenu ,width = 20, text = "Plot Topological", foreground = self.buttonFontColor ,background = self.buttonColor, font = self.buttonFont ,command = self.print_topological_map  )
+		self.buttonPlotTopological= Button(self.topLevelWindow ,width = 20, text = "Plot Topological", bg = 'green', activebackground = 'green',command = self.print_topological_map )
 
 #---------------------------------------- Values' fields -----------------------------------------------------------------------------
 
@@ -429,6 +436,7 @@ class PLANNER(object):
 		self.noise_percentage_light_intensity.grid({'row':4, 'column': 6})        
 		self.label_noise_percentage_light_quadrant.grid({'row':5, 'column': 5})        
 		self.noise_percentage_light_quadrant.grid({'row':5, 'column': 6})        
+		self.buttonPlotTopological.grid({'row':7, 'column': 0})
     
     		if num_behavior == 0:
 			self.ButtonPath(1)
@@ -526,8 +534,30 @@ class PLANNER(object):
 		id = C.create_rectangle(X2,Y2,X2+1,Y2+1, fill= "white", outline="white")
 
 
-
     def plot_oval(self,x,y):
+        global C
+        global radio_robot
+
+
+        CNT=5.0
+        #print "plot robot pose_tetha ",pose_tetha
+        X = ( DIM_CANVAS_X * x ) / dim_x
+        Y = DIM_CANVAS_Y - ( DIM_CANVAS_Y * y ) / dim_y
+        ROBOT_radio = ( DIM_CANVAS_X * radio_robot ) / dim_x
+        #X1 = X - ROBOT_radio/2
+        #Y1 = Y - ROBOT_radio/2
+        #X2 = X + ROBOT_radio/2
+        #Y2 = Y + ROBOT_radio/2
+        X1 = X - 1.5*ROBOT_radio
+        Y1 = Y - 1.5*ROBOT_radio
+        X2 = X + 1.5*ROBOT_radio
+        Y2 = Y + 1.5*ROBOT_radio
+        #print "X1 ", X1, " Y1 ", Y1
+        #print "X2 ", X2, " Y2 ", Y2
+        oval = C.create_oval(X1,Y1,X2,Y2, outline="black",fill="yellow", width=1)
+
+
+    def plot_oval_green(self,x,y):
         global C
 	global radio_robot
 
@@ -547,7 +577,7 @@ class PLANNER(object):
         Y2 = Y + 1.5*ROBOT_radio
         #print "X1 ", X1, " Y1 ", Y1
         #print "X2 ", X2, " Y2 ", Y2
-        oval = C.create_oval(X1,Y1,X2,Y2, outline="black",fill="yellow", width=1)
+        oval = C.create_oval(X1,Y1,X2,Y2, outline="green",fill="green", width=1)
 
 
     def plot_robot(self):
@@ -686,6 +716,7 @@ class PLANNER(object):
         number_steps_total = float(number_steps)
         num_steps = 1
 	cnt_unk = 1
+	flg_destination = 0
 	
 	for line in file:
     		#print line,
@@ -735,6 +766,29 @@ class PLANNER(object):
 			dest_x = x
 			dest_y = y
 			self.plot_oval(x,y)
+			if flg_destination == 0:
+				x_previous=x
+				y_previous=y
+				flg_destination=1
+			else:
+				self.plot_oval_green(x_previous,y_previous)
+				x_previous=x
+                                y_previous=y
+                                time.sleep(0.1) # 0.1 delay seconds to see the plot of the destination
+
+		  elif words[1] == "connection":                                  #to get polygons vertex
+                                X1 = float (words[2]) * DIM_CANVAS_X / dim_x
+                                Y1 = (dim_y - float (words[3])) * DIM_CANVAS_Y / dim_y
+                                X2 = float (words[4]) * DIM_CANVAS_X / dim_x
+                                Y2 = (dim_y - float (words[5])) * DIM_CANVAS_Y / dim_y
+                                #print 'x1 ',X1, 'y1 ',Y2
+                                #print 'x2 ',X2, 'y2 ',Y2
+                                C.update()
+                                id = C.create_rectangle(X1, Y1, X1+2, Y1+2, fill= "darkblue")
+                                id = C.create_rectangle(X2, Y2, X2+2, Y2+2, fill= "darkblue")
+				line = C.create_line(X1,Y1,X2,Y2,fill="darkblue", arrow="last")
+                                C.update_idletasks()
+                                time.sleep(0.001) # 0.001 delay seconds to see the plot of the lines
 
 
 
@@ -1198,6 +1252,77 @@ class PLANNER(object):
 	self.TestButtonMEALLYFSMGEN ['bg'] = 'green'
 	self.TestButtonMOOREFSMGEN ['bg'] = 'green'
         self.TestButtonREACTIVEGEN['activebackground'] = 'green'
+
+
+
+    def print_topological_map(self): # It plots  the topological map of the current map  and  show  "please wait" message
+	#wait_bg=C.create_rectangle(DIM_CANVAS_X/2-30-120 ,DIM_CANVAS_Y/2-50 ,DIM_CANVAS_X/2-30+120 ,DIM_CANVAS_Y/2+50 ,fill="white")
+	#wait = C.create_text(DIM_CANVAS_X/2-30,DIM_CANVAS_Y/2,fill="darkblue",font="Calibri 20 bold", text="PLEASE WAIT ...")
+	C.update()
+	self.buttonPlotTopological['bg'] = 'red'
+       	self.buttonPlotTopological['activebackground'] = 'red'
+	self.print_topological_map_lines()
+	self.buttonPlotTopological['bg'] = 'green'
+       	self.buttonPlotTopological['activebackground'] = 'green'
+	#self.w.delete(wait)
+	#self.w.delete(wait_bg)
+	#self.plot_robot()
+
+
+
+    def print_topological_map_lines(self): # It plots  the topological map of the current map  
+
+                #self.clear_topological_map();
+                self.varShowNodes = True
+
+                #self.w.delete(self.nodes_image)        
+                nodes_coords = []
+                #image = Image.new('RGBA', (DIM_CANVAS_X,DIM_CANVAS_Y))
+                #draw = ImageDraw.Draw(image)
+		PATH = self.path.get()
+	        File_Name = self.file.get()
+        	#print 'Path ',PATH 
+        	#print 'File ',File_Name
+        	FILE = PATH + File_Name + '.top'
+        	map_file = open(FILE, 'r')
+                #map_file = open(self.rospack.get_path('simulator')+'/src/data/'+self.entryFile.get()+'/'+self.entryFile.get()+'.top','r')                  #Open file
+                lines = map_file.readlines()                          #Split the file in lines
+                for line in lines:                                                                        #To read line by line
+                        words = line.split()                              #To separate  words 
+                	#print len(words)
+                	#for i in range(0, len(words)):
+                        	#print words[i]
+                        if words:                                                                                 #To avoid empty lines                                                 
+                                if words[0] == "(":                                                       #To avoid coments
+                                        if words[1] == "num":                     #To get world dimensions
+                                                numNode = float (words[3])
+                                        elif words[1] == "node":                                  #to get polygons vertex
+                                                numNode = words[2]
+						nodeXm = float (words[3]) * DIM_CANVAS_X / dim_x 
+                				nodeYm = (dim_y - float (words[4])) * DIM_CANVAS_Y / dim_y 
+						#print 'word[3] ' + words[3] + ' words[4] ' + words[4]
+						#print 'Xm ' + str(nodeXm) + ' Ym ' + str(nodeYm)
+						C.update()
+						id = C.create_rectangle(nodeXm, nodeYm, nodeXm+2, nodeYm+2, fill= "darkblue")
+                                                nodes_coords.append([nodeXm,nodeYm])
+                                        elif words[1] == "connection":                            #to get polygons vertex
+                                                c1 = int(words[2])
+                                                c2 = int(words[3])
+						#print 'Node C1 ' + str(c1) + ' C2 ' + str(c2)
+						x1 = nodes_coords[c1][0]
+						y1 = nodes_coords[c1][1]
+						x2 = nodes_coords[c2][0]
+						y2 = nodes_coords[c2][1]
+						#print 'X1 ' + str(x1) + ' Y1 ' + str(y1)
+						#print 'X2 ' + str(x2) + ' Y2 ' + str(y2)
+						line = C.create_line(x1,y1,x2,y2,fill="darkblue", arrow="last")
+        					C.update_idletasks()
+						time.sleep(0.001) # 0.001 delay seconds to see the plot of the lines
+
+		#print 'dim_x ' + str(dim_x) + ' dim_y ' + str(dim_y)
+
+                map_file.close()
+
 
 
 

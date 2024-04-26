@@ -1,2 +1,2 @@
-../Dijkstra/Dijkstra -x 0.411717 -y 0.347728 -a 0.000000 -v 0.630000 -z 0.790000 -s laser -n 2 -t -0.200000 -r 0.400000 -p ../../data_students/ -e obstacle -advance 0.040000 -MaxAngle 0.392699 -selection 1 -largest 0.000000 -noise 1 -omni 1 -vq 0 -size_vq 4 -pr_out 0 -out_file room -nn_rec 1 -nn_unk 0
-0.000000
+../Dijkstra/Dijkstra -x 0.516884 -y 0.802623 -a 0.000000 -v 0.624438 -z 0.653812 -s laser -n 2 -t -0.200000 -r 0.400000 -p ../../data_students/ -e random_2 -advance 0.040000 -MaxAngle 0.392699 -selection 1 -largest 0.000000 -noise 1 -omni 1 -vq 0 -size_vq 4 -pr_out 0 -out_file room -nn_rec 1 -nn_unk 0
+0.185147
