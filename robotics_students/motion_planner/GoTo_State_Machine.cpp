@@ -263,186 +263,175 @@ int go_to(Inputs inputs)
 	// ********************************** Behaviors *****************************************************************
 
 
-	if(selection == 1){
-                // It calculates the robot's movement using orden cero logic 
-                // reactive behavior in ../state_machines/reactive_behavior.h
-                //mov_vector_avoidance_destination = reactive_behavior(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
-                DistTheta = reactive_behavior(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
-
-#ifdef DEBUG
-                printf("reactive behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
+	if(selection == 1)
+	{
+        // It calculates the robot's movement using orden cero logic 
+        // reactive behavior in ../state_machines/reactive_behavior.h
+        //mov_vector_avoidance_destination = reactive_behavior(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
+        DistTheta = reactive_behavior(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
+		#ifdef DEBUG
+			printf("reactive behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
 	}
-
-	else if(selection == 2){
+	else if(selection == 2)
+	{
 		// It calculates the robot's movement using an state machine that only avoids obstacles
 		// state_machine_avoidance_destination in ../state_machines/state_machine_avoidance.h
 		state=next_state;
 		DistTheta = state_machine_avoidance(observations, inputs.num_sensors, state, &next_state,inputs.Mag_Advance,inputs.max_angle);
-
-#ifdef DEBUG
-		printf("avoidance behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
+		#ifdef DEBUG
+			printf("avoidance behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
 	}
-
-	else if(selection == 3){
+	else if(selection == 3)
+	{
 		// It calculates the robot's movement using an state machine that only goes to a light source
 		// state_machine_destination in ../state_machines/state_machine_destination.h
 		state=next_state;
 		DistTheta = state_machine_destination(quantized_attraction, quantized_intensity,state,&next_state,inputs.Mag_Advance,inputs.max_angle);
-
-#ifdef DEBUG
-		printf("destination behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
-
+		#ifdef DEBUG
+			printf("destination behavior movement: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
 	}
-
-	else if(selection == 4){
+	else if(selection == 4)
+	{
 		// It calculates the robot's movement using an state machine that avoids obstacles and goes to a light source
 		state=next_state;
 		// state_machine_avoidance_destination in ../state_machines/state_machine_avoidance_destination.h
 		DistTheta = state_machine_avoidance_destination(quantized_obs,quantized_attraction,quantized_intensity,state, &next_state,inputs.Mag_Advance,inputs.max_angle);
-#ifdef DEBUG
-		printf("avoidance destination behavior: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
+		#ifdef DEBUG
+				printf("avoidance destination behavior: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
 	}
+    else if(selection == 5)
+	{
+        // It calculates the robot's movement using an state machine created by an student
+        // state_machine_avoidance_destination in ../state_machines/state_machine_student.h
+        DistTheta = reactive_students(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
+		#ifdef DEBUG
+						printf("Student reactive behavior movement avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
+    }
+	else if(selection == 6)
+	{
+        // It calculates the robot's movement using an state machine created by an student
+        state=next_state;
+        // state_machine_students in ../state_machines/state_machine_student.h
+        DistTheta = state_machine_students(observations, quantized_attraction, quantized_intensity,state,&next_state,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors,angle_light);
 
-        else if(selection == 5){
-                // It calculates the robot's movement using an state machine created by an student
+		#ifdef DEBUG
+			printf("Student FSM behavior avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
+		#endif
+    }
+	else if(selection == 7)
+	{
+		// it finds a path from the origen to a destination using an AI search algorithm
+    	if(flagOnce)
+        {
+            for(i = 0; i < 200; i++) steps[i].node = -1;
 
-                // state_machine_avoidance_destination in ../state_machines/state_machine_student.h
-                DistTheta = reactive_students(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors);
-
-#ifdef DEBUG
-                printf("Student reactive behavior movement avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
-        }
-
-	else if(selection == 6){
-                // It calculates the robot's movement using an state machine created by an student
-                state=next_state;
-                // state_machine_students in ../state_machines/state_machine_student.h
-                DistTheta = state_machine_students(observations, quantized_attraction, quantized_intensity,state,&next_state,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors,angle_light);
-
-#ifdef DEBUG
-                printf("Student FSM behavior avoidance destination: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
-#endif
-        }
-
-	else if(selection == 7){
-
-		    // it finds a path from the origen to a destination using an AI search algorithm
-                if(flagOnce)
-                {
-                    for(i = 0; i < 200; i++) steps[i].node = -1;
-
-		    if(method == 1){
-
-		    		// it finds a path from the origen to a destination using the first search algorithm
-                    		sp=dfs(coord_robot.xc,coord_robot.yc,coord_dest.xc,coord_dest.yc,inputs.path,inputs.environment,steps);
-
+		    if(method == 1)
+			{
+				// it finds a path from the origen to a destination using the first search algorithm
+        		sp=dfs(coord_robot.xc,coord_robot.yc,coord_dest.xc,coord_dest.yc,inputs.path,inputs.environment,steps);
 		    }
-		    else{
-		    		// it finds a path from the origen to a destination using the Dijkstra algorithm
-                    		sp=dijkstra(coord_robot.xc,coord_robot.yc,coord_dest.xc, coord_dest.yc,inputs.path,inputs.environment,steps);
-
+		    else
+			{
+		    	// it finds a path from the origen to a destination using the Dijkstra algorithm
+        		sp=dijkstra(coord_robot.xc,coord_robot.yc,coord_dest.xc, coord_dest.yc,inputs.path,inputs.environment,steps);
 		    }
 
-		    for(i=0; i < sp-1; i++){
-			fprintf(fpw,"( connection %f %f %f %f )\n",steps[i].x, steps[i].y,steps[i+1].x, steps[i+1].y);
-			#ifdef DEBUG
-        		printf(" Node %d x %f y %f\n", steps[i].node, steps[i].x, steps[i].y);
-			#endif
-    		    }
-		    fprintf(fpw,"( connection %f %f %f %f )\n",steps[i].x, steps[i].y,steps[i].x, steps[i].y);
+		    for(i=0; i < sp-1; i++)
+			{
+				fprintf(fpw,"( connection %f %f %f %f )\n",steps[i].x, steps[i].y,steps[i+1].x, steps[i+1].y);
+				#ifdef DEBUG
+					printf(" Node %d x %f y %f\n", steps[i].node, steps[i].x, steps[i].y);
+				#endif
+    		}
+		    
+			fprintf(fpw,"( connection %f %f %f %f )\n",steps[i].x, steps[i].y,steps[i].x, steps[i].y);
 
-
-                    ii = 0;
-                    final_x = coord_dest.xc;
-                    final_y = coord_dest.yc;
+            ii = 0;
+            final_x = coord_dest.xc;
+           	final_y = coord_dest.yc;
 		    fprintf(fpw,"( destination %f %f )\n",steps[ii].x,steps[ii].y);
-		    coord_dest.xc= steps[ii].x;
-		    coord_dest.yc=steps[ii].y;
+		    coord_dest.xc = steps[ii].x;
+		    coord_dest.yc = steps[ii].y;
 
-		    #ifdef DEBUG
-        	    printf("Node %d x %f y %f\n", steps[ii].node, steps[ii].x, steps[ii].y);
-                    printf("First light %d: x = %f  y = %f \n",ii,steps[ii].x,steps[ii].y);
-		    #endif
+			#ifdef DEBUG
+				printf("Node %d x %f y %f\n", steps[ii].node, steps[ii].x, steps[ii].y);
+				printf("First light %d: x = %f  y = %f \n",ii,steps[ii].x,steps[ii].y);
+			#endif
 
-                    flagOnce = 0;
-                    flg_finish=0;
+            flagOnce = 0;
+            flg_finish=0;
 		    state=next_state;
 		    DistTheta.angle=0.0;
-		    DistTheta.distance=0.0;
-		    
-                }
-                else
-                {
-                    if(flg == 1) {
-                        if(flg_finish == 1){
-				fprintf(fpw,"( distance %f )\n",distance1);
- 				fprintf(fpw,"( num_steps %d )\n",num_obs);
- 				fclose(fpw);
- 				return(num_obs);
-		     }
-                     else {
-                            ii++;
-                            if(steps[ii].node != -1)
-                            {
-				fprintf(fpw,"( destination %f %f )\n",steps[ii].x,steps[ii].y);
+		    DistTheta.distance=0.0;    
+        }
+        else
+        {
+            if(flg == 1) 
+			{
+                if(flg_finish == 1)
+				{
+					fprintf(fpw,"( distance %f )\n",distance1);
+					fprintf(fpw,"( num_steps %d )\n",num_obs);
+					fclose(fpw);
+					return(num_obs);
+		     	}
+                else 
+				{
+                    ii++;
+                    if(steps[ii].node != -1)
+	                {
+						fprintf(fpw,"( destination %f %f )\n",steps[ii].x,steps[ii].y);
                     		coord_dest.xc= steps[ii].x;
                     		coord_dest.yc=steps[ii].y;
 
                     		#ifdef DEBUG
-        	    		printf("Node %d x %f y %f\n", steps[ii].node, steps[ii].x, steps[ii].y);
-                    		printf("New Light %d: x = %f  y = %f \n",ii,steps[ii].x,steps[ii].y);
+        	    				printf("Node %d x %f y %f\n", steps[ii].node, steps[ii].x, steps[ii].y);
+                    			printf("New Light %d: x = %f  y = %f \n",ii,steps[ii].x,steps[ii].y);
                     		#endif
 
-				flg=0;
-                                //printf("type a number \n");
-                                //scanf("%d",&tmp);
-                            }
-                            else
-                            {
-				fprintf(fpw,"( destination %f %f )\n",final_x,final_y);
-                                coord_dest.xc= final_x;
-                                coord_dest.yc= final_y;
-                                printf("Final Light %d: x = %f  y = %f \n",i,final_x,final_y);
-				flg=0;
-                                flg_finish = 1;
-                            }
-                     }
+							flg=0;
+                            //printf("type a number \n");
+                            //scanf("%d",&tmp);
                     }
-
-		    // It calculates the robot's movement using an state machine that avoids obstacles and goes to a light source
-                    state=next_state;
-                    //DistTheta = state_machine_avoidance_destination(quantized_obs,quantized_attraction,quantized_intensity,state, &next_state,inputs.Mag_Advance,inputs.max_angle);
-					DistTheta = campos_potenciales(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors,coord_robot.xc,coord_robot.yc,coord_robot.anglec,coord_dest.xc,coord_dest.yc,coord_dest.anglec,distance1);
+                    else
+                    {
+						fprintf(fpw,"( destination %f %f )\n",final_x,final_y);
+                        coord_dest.xc= final_x;
+                        coord_dest.yc= final_y;
+                        printf("Final Light %d: x = %f  y = %f \n",i,final_x,final_y);
+						flg=0;
+                        flg_finish = 1;
+                    }
+                }
+            }
+		    //It calculates the robot's movement using an state machine that avoids obstacles and goes to a light source
+            state=next_state;
+            //DistTheta = state_machine_avoidance_destination(quantized_obs,quantized_attraction,quantized_intensity,state, &next_state,inputs.Mag_Advance,inputs.max_angle);
+			DistTheta = campos_potenciales(observations, quantized_attraction, quantized_intensity,inputs.Mag_Advance,inputs.max_angle, inputs.num_sensors,coord_robot.xc,coord_robot.yc,coord_robot.anglec,coord_dest.xc,coord_dest.yc,coord_dest.anglec,distance1);
 		    #ifdef DEBUG
                	    printf("avoidance destination behavior: angle  %f distance %f\n",DistTheta.angle,DistTheta.distance);
 		    #endif
-
-                }
-
         }
+    }
+	else if(selection == 8)
+	{
 
-	else if(selection == 8){
-
-		    DistTheta.angle=0.0;
-		    DistTheta.distance=0.0;
-
-        }
-
-
-        else {
-                printf("This behavior does not exist \n");
-                exit(0);
-        }
-
+		DistTheta.angle=0.0;
+	    DistTheta.distance=0.0;
+    }
+    else 
+	{
+        printf("This behavior does not exist \n");
+        exit(0);
+    }
 
 
-
-	// ****************************************** ACTIONS ***********************************************************************
+// ****************************************** ACTIONS ***********************************************************************
 
 
 #ifdef DEBUG
