@@ -1,0 +1,3 @@
+(load objects_deftemplates.clp)
+(load initial_state_final.clp)
+(load cubes_operators.clp)

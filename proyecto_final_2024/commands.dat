@@ -1,0 +1,6 @@
+OPERATOR move D floor
+OPERATOR move E floor
+OPERATOR move A floor
+OPERATOR move B floor
+OPERATOR move F C
+finish planner
